@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_VCDistributeurConcurent" object="${vcdistributeurconcurent_}" path="/vcdistributeurconcurents" z="RK4JGYQ3EBR4YnmJPdQFb06dKAY=">
+        <field:display field="nomDistributeur" id="s_com_polypharm_gescom_domain_VCDistributeurConcurent_nomDistributeur" object="${vcdistributeurconcurent_}" z="/50B8j3of3wmxEuI8A4l/R2yljw="/>
+        <field:display field="localisation" id="s_com_polypharm_gescom_domain_VCDistributeurConcurent_localisation" object="${vcdistributeurconcurent_}" z="m+V/4HzwIGUNj9ooyTpmyYHvqwg="/>
+        <field:display field="produitsDistribues" id="s_com_polypharm_gescom_domain_VCDistributeurConcurent_produitsDistribues" object="${vcdistributeurconcurent_}" z="efDsrAc857nXOtG67JuvaA8bmSs="/>
+    </page:show>
+</div>

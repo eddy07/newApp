@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_Montage" items="${montages}" z="YsFoh5geUCWYXqqULLtFaY8tLGk=">
+        <table:table data="${montages}" id="l_com_polypharm_gescom_domain_Montage" path="/montages" z="ctT1l1rYEnOxNbrjac2X1mBfxDo=">
+            <table:column id="c_com_polypharm_gescom_domain_Montage_nomEquipement" property="nomEquipement" z="UZKg6biS+WQNXcO218ahDXbjUyI="/>
+            <table:column id="c_com_polypharm_gescom_domain_Montage_duree" property="duree" z="NIw2hpxHC3tdyQ7WFZH/xJfypyc="/>
+            <table:column date="true" dateTimePattern="${montage_datemontage_date_format}" id="c_com_polypharm_gescom_domain_Montage_dateMontage" property="dateMontage" z="whDCslFRHZjasaAJ/+6tVomf9i4="/>
+        </table:table>
+    </page:list>
+</div>

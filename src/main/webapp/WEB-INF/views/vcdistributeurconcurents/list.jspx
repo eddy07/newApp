@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_VCDistributeurConcurent" items="${vcdistributeurconcurents}" z="GBJCZZ3h2qXXE3sh5R7aRBkEtCk=">
+        <table:table data="${vcdistributeurconcurents}" id="l_com_polypharm_gescom_domain_VCDistributeurConcurent" path="/vcdistributeurconcurents" z="GkxYHvCd8s7H3VuWdleOK4pf5io=">
+            <table:column id="c_com_polypharm_gescom_domain_VCDistributeurConcurent_nomDistributeur" property="nomDistributeur" z="8NG3oR2Be089wAZgH7+eZ0fjQ0M="/>
+            <table:column id="c_com_polypharm_gescom_domain_VCDistributeurConcurent_localisation" property="localisation" z="PdmX9QeBroTaluruW0d8ftiN+30="/>
+            <table:column id="c_com_polypharm_gescom_domain_VCDistributeurConcurent_produitsDistribues" property="produitsDistribues" z="WcbRe7V+6h3B6xHZmzHhGvFQf5M="/>
+        </table:table>
+    </page:list>
+</div>

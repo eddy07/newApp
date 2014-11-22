@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_polypharm_gescom_domain_VulgarisationProduit" modelAttribute="vulgarisationProduit" path="/vulgarisationproduits" versionField="Version" z="Zq4L73K8sElIt+1+WEEDbwIA/KA=">
+        <field:select field="produitVulgarise" id="c_com_polypharm_gescom_domain_VulgarisationProduit_produitVulgarise" itemValue="id" items="${produits}" path="/produits" z="HUNwwP3hJnL1QtABf8fIcdCyX4s="/>
+        <field:select field="client" id="c_com_polypharm_gescom_domain_VulgarisationProduit_client" itemValue="id" items="${clients}" path="/clients" z="Ywxn1gIXDT5D51txAAB5H4NeQ9M="/>
+        <field:input field="nomInterlocuteur" id="c_com_polypharm_gescom_domain_VulgarisationProduit_nomInterlocuteur" z="qCsudojBHEjLZdcCYd3/afrRhKc="/>
+        <field:input field="telInterlocuteur" id="c_com_polypharm_gescom_domain_VulgarisationProduit_telInterlocuteur" z="i8znbmFr/sXlmwkqPmdpWFEMGH4="/>
+        <field:datetime dateTimePattern="${vulgarisationProduit_datevulgarisation_date_format}" field="dateVulgarisation" id="c_com_polypharm_gescom_domain_VulgarisationProduit_dateVulgarisation" z="U+4k2QH7kOV+VS9mjoMq56N36B4="/>
+        <field:select field="auteur" id="c_com_polypharm_gescom_domain_VulgarisationProduit_auteur" itemValue="id" items="${personnels}" path="/personnels" z="cBmugYUrLDNZAJhoSlJvI7EEC+U="/>
+    </form:update>
+</div>

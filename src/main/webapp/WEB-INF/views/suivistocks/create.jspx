@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_polypharm_gescom_domain_SuiviStock" modelAttribute="suiviStock" path="/suivistocks" render="${empty dependencies}" z="NS5mRcExLRHoJ11IWYNW6eEe+Eg=">
+        <field:select field="produit" id="c_com_polypharm_gescom_domain_SuiviStock_produit" itemValue="id" items="${produits}" path="/produits" z="h+kSzkNDNk3s81i2H8hZCcwxgIo="/>
+        <field:input field="derniereQteCommande" id="c_com_polypharm_gescom_domain_SuiviStock_derniereQteCommande" validationMessageCode="field_invalid_integer" z="x7cahDNCJfdUkjH8+HOc0FN0NEs="/>
+        <field:input field="qteStock" id="c_com_polypharm_gescom_domain_SuiviStock_qteStock" validationMessageCode="field_invalid_integer" z="jHLwz0ravK3CWFOhPM6C8z081nc="/>
+        <field:datetime dateTimePattern="${suiviStock_datedernierecommande_date_format}" field="dateDerniereCommande" id="c_com_polypharm_gescom_domain_SuiviStock_dateDerniereCommande" z="Nz4HpU9jhwyYqqYzKHCnGfrc5Vs="/>
+        <field:datetime dateTimePattern="${suiviStock_datesuivi_date_format}" field="dateSuivi" id="c_com_polypharm_gescom_domain_SuiviStock_dateSuivi" z="7xui2weAYQHjaWsVlAhdEFtormM="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_polypharm_gescom_domain_SuiviStock" render="${not empty dependencies}" z="/hERG+0IrmByadQW/WR7v95uyJE="/>
+</div>

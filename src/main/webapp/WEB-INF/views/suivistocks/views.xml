@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="suivistocks/list">
+        <put-attribute name="body" value="/WEB-INF/views/suivistocks/list.jspx"/>
+    </definition>
+<definition extends="default" name="suivistocks/show">
+        <put-attribute name="body" value="/WEB-INF/views/suivistocks/show.jspx"/>
+    </definition>
+<definition extends="default" name="suivistocks/create">
+        <put-attribute name="body" value="/WEB-INF/views/suivistocks/create.jspx"/>
+    </definition>
+<definition extends="default" name="suivistocks/update">
+        <put-attribute name="body" value="/WEB-INF/views/suivistocks/update.jspx"/>
+    </definition>
+</tiles-definitions>

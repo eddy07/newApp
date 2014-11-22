@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_ProjetCommande" object="${projetcommande}" path="/projetcommandes" z="FRx+NZPy0h6RTjMmNMZVMgSm8c4=">
+        <field:display field="objetProjet" id="s_com_polypharm_gescom_domain_ProjetCommande_objetProjet" object="${projetcommande}" z="7FZpIOsdESRxtrfFwS7wE+WUkho="/>
+        <field:display field="referencePROFORMA" id="s_com_polypharm_gescom_domain_ProjetCommande_referencePROFORMA" object="${projetcommande}" z="yNJoHnkfHxtzsyWwfS+oLVu2J4s="/>
+        <field:display field="referenceBonCommande" id="s_com_polypharm_gescom_domain_ProjetCommande_referenceBonCommande" object="${projetcommande}" z="mjNUcDyIILVPZOphM6pVTnl1vUI="/>
+        <field:display field="clientConcerne" id="s_com_polypharm_gescom_domain_ProjetCommande_clientConcerne" object="${projetcommande}" z="hEDyo8O28OVUUwcgGxqu7RM0je0="/>
+        <field:display field="interlocuteurPrincipal" id="s_com_polypharm_gescom_domain_ProjetCommande_interlocuteurPrincipal" object="${projetcommande}" z="o7ldgb/Q8x15um1NKeMFKAIMMuo="/>
+    </page:show>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_RecrutementProspect" object="${recrutementprospect}" path="/recrutementprospects" z="8gh/mnHnklZ0yQ9K5KIWA8rI2Vo=">
+        <field:display field="denominationProspect" id="s_com_polypharm_gescom_domain_RecrutementProspect_denominationProspect" object="${recrutementprospect}" z="J4RAJ6BGae/ZyUo2te9OWigeuIs="/>
+        <field:display field="fctionInterlocuteur" id="s_com_polypharm_gescom_domain_RecrutementProspect_fctionInterlocuteur" object="${recrutementprospect}" z="COfRaYtbnW4V8Qif5NuxiYy3zu4="/>
+        <field:display field="telephone" id="s_com_polypharm_gescom_domain_RecrutementProspect_telephone" object="${recrutementprospect}" z="5aOgc2k/V3R0vrEwGL++IdncclU="/>
+        <field:display field="email" id="s_com_polypharm_gescom_domain_RecrutementProspect_email" object="${recrutementprospect}" z="PRRfQH/RAD1/tmqKOvopQ88ZQTY="/>
+        <field:display field="boitePostale" id="s_com_polypharm_gescom_domain_RecrutementProspect_boitePostale" object="${recrutementprospect}" z="Dp2yVt4w08mOyTM4mwpnGaYskew="/>
+        <field:display field="localisation" id="s_com_polypharm_gescom_domain_RecrutementProspect_localisation" object="${recrutementprospect}" z="FPfv1zX5Y5hbnON3fMLtXvb+V1w="/>
+        <field:display date="true" dateTimePattern="${recrutementProspect_daterecrutement_date_format}" field="dateRecrutement" id="s_com_polypharm_gescom_domain_RecrutementProspect_dateRecrutement" object="${recrutementprospect}" z="3PR7b7tMWguO/zhUH8g7PYlOg70="/>
+        <field:display field="auteur" id="s_com_polypharm_gescom_domain_RecrutementProspect_auteur" object="${recrutementprospect}" z="NA1m74nRXquMlTWls5TpW8+4aAQ="/>
+    </page:show>
+</div>

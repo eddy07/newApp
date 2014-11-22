@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_polypharm_gescom_domain_Personnel" modelAttribute="personnel" path="/personnels" versionField="Version" z="9V87fRJeYAJGy6DTcoltTMAdKBM=">
+        <field:input field="nom" id="c_com_polypharm_gescom_domain_Personnel_nom" z="v5H3ZaynnPMtUEnvFNjt5WBU8Fk="/>
+        <field:input field="nomConnection" id="c_com_polypharm_gescom_domain_Personnel_nomConnection" z="wTd2Muk1lKsCSbbZxZh1XUtniPw="/>
+        <field:input field="motDePass" id="c_com_polypharm_gescom_domain_Personnel_motDePass" z="lbJClN59RbIDJUi0Z1yn4LDRycE="/>
+        <field:input field="nomComplet" id="c_com_polypharm_gescom_domain_Personnel_nomComplet" z="wjOREFhg1TtvB/coVgIAzCiqkJk="/>
+        <field:input field="telephone" id="c_com_polypharm_gescom_domain_Personnel_telephone" z="96K+NIEW0jKGi4AxQDNlVMy/XCM="/>
+        <field:input field="email" id="c_com_polypharm_gescom_domain_Personnel_email" validationMessageCode="field_invalid_email" z="80U20aketEQHA4V+ON9IFgYtmck="/>
+        <field:select field="roleName" id="c_com_polypharm_gescom_domain_Personnel_roleName" items="${rolenames}" path="rolenames" z="bmSub1HbGwWLwRidOe22Va/nNGs="/>
+        <field:select field="agence" id="c_com_polypharm_gescom_domain_Personnel_agence" itemValue="id" items="${agences}" path="/agences" z="j1GK2rNlQVqPfMAdpmLjsMSBduo="/>
+    </form:update>
+</div>

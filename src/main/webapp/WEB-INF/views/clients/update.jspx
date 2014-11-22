@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_polypharm_gescom_domain_Client" modelAttribute="client" path="/clients" versionField="Version" z="O/tzHTSutxFaYesx+PYUJCrTxUg=">
+        <field:input field="nom" id="c_com_polypharm_gescom_domain_Client_nom" z="b0smbiDCISRs0aZlgQtk0ZXsJ8A="/>
+        <field:input field="telephone" id="c_com_polypharm_gescom_domain_Client_telephone" z="m/sBaZe6y90g/uugxQMwkLbSZUI="/>
+        <field:input field="numeroCarteContribuable" id="c_com_polypharm_gescom_domain_Client_numeroCarteContribuable" z="s1iG6v0x4DawO9pH4fanOwUTbXU="/>
+        <field:datetime dateTimePattern="${client_expirationcartecontribuable_date_format}" field="expirationCarteContribuable" id="c_com_polypharm_gescom_domain_Client_expirationCarteContribuable" z="JPOnXhoX+QDZH/NAZYT838L8WQM="/>
+        <field:input field="regimeFiscal" id="c_com_polypharm_gescom_domain_Client_regimeFiscal" z="4uWWeo23ml3t9+WlWOLk09Y6UhM="/>
+        <field:datetime dateTimePattern="${client_expirationpatente_date_format}" field="expirationPatente" id="c_com_polypharm_gescom_domain_Client_expirationPatente" z="bU57klU3xgQEeo2a9KdycIie42c="/>
+        <field:input field="localisation" id="c_com_polypharm_gescom_domain_Client_localisation" z="TPtSieCOdmdSUiSksNvxJabapQY="/>
+        <field:checkbox field="colleterTva" id="c_com_polypharm_gescom_domain_Client_colleterTva" z="Bwg+xh5gCU8OsuLEWATRcilQ/ec="/>
+        <field:input field="numAttestationNonRedevance" id="c_com_polypharm_gescom_domain_Client_numAttestationNonRedevance" z="EEmznRChDTlNq3HQyros/2e4ToA="/>
+        <field:input field="numAttestationSoumissionCNPS" id="c_com_polypharm_gescom_domain_Client_numAttestationSoumissionCNPS" z="vtjYLrpw8l7C1npSW8SOJpTvndk="/>
+    </form:update>
+</div>

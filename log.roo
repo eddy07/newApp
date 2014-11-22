@@ -1,0 +1,313 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-11-17 22:20:37
+project --topLevelPackage com.polypharm.gescom
+jpa setup --provider HIBERNATE --database H2_IN_MEMORY 
+entity jpa --class ~.domain.Client --activeRecord false
+field string --fieldName nom
+field string --fieldName telephone
+field string --fieldName numeroCarteContribuable
+field date --fieldName expirationCarteContribuable --type java.util.Date
+field string --fieldName regimeFiscal
+field date --fieldName expirationPatente --type java.util.Date
+field string --fieldName localisation
+field boolean --fieldName colleterTva
+field string --fieldName numAttestationNonRedevance
+field string --fieldName numAttestationSoumissionCNPS
+entity jpa --class ~.domain.DossierCreance
+field string --fieldName numBonCommande
+field string --fieldName numBonLivraison
+field string --fieldName numFacture
+field string --fieldName natureGarantie
+field string numContratCreance
+field date --fieldName dateEmission --type java.util.Date
+field date --fieldName dateEchance --type java.util.Date
+field reference --fieldName client --type ~.domain.Client
+entity jpa --class ~.domain.FamilleProduit
+field string --fieldName nom
+field string --fieldName description
+entity jpa --class ~.domain.Produit
+field string --fieldName nom
+field string --fieldName description
+field reference --fieldName familleProduit --type ~.domain.FamilleProduit
+entity jpa --class ~.domain.RecrutementProspect --activeRecord false
+field string denominationProspect
+field string fctionInterlocuteur
+field string --fieldName telephone
+field string email
+field string --fieldName boitePostale
+field string --fieldName localisation
+field date --fieldName dateRecrutement --type java.util.Date
+entity jpa --class ~.domain.VulgarisationProduit
+field reference --fieldName produitVulgarise --type ~.domain.Produit
+field reference --fieldName client --type ~.domain.Client
+field string nomInterlocuteur
+field string telInterlocuteur
+field date --fieldName dateVulgarisation --type java.util.Date
+// [failed] enum type --class Role
+// [failed] enum constant --name RESPONSABLE_COMMERCIAL
+enum type --class RoleName
+enum constant --name RESPONSABLE_COMMERCIALE
+enum constant --name RESPONSABLE_FORCE_DE_VENTE
+enum constant --name RESPONSABLE_COMPTABLE
+enum constant --name RESPONSABLE_AUDIT
+enum constant --name RESPONSABLE_CONTROLE
+enum constant --name RESPONSABLE_INFORMATIQUE
+entity jpa --class Personnel --testAutomatically false
+field string --fieldName nom
+// [failed] field string --fieldName nom
+field string --fieldName nomConnection
+field string --fieldName motDePass
+field string --fieldName nomComplet
+field string --fieldName telephone
+field string --fieldName email
+field enum --fieldName roleName --type ~.domain.RoleName
+entity jpa --class ~.domain.Agence
+field string --fieldName nom
+field string --fieldName description
+focus --class ~.domain.Personnel
+field reference --fieldName agence --type ~.domain.Agence
+focus --class ~.domain.DossierCreance
+field reference --fieldName auteur --type ~.domain.Personnel
+focus --class ~.domain.RecrutementProspect
+field reference --fieldName auteur --type ~.domain.Personnel
+focus --class ~.domain.VulgarisationProduit
+field reference --fieldName auteur --type ~.domain.Personnel
+entity jpa --class ~.domain.SuiviStock
+field reference --fieldName produit --type ~.domain.Produit
+field number --fieldName derniereQteCommande --type java.lang.Integer
+field number --fieldName qteStock --type java.lang.Integer
+field date --fieldName dateDerniereCommande --type java.util.Date
+field date --fieldName dateSuivi --type java.util.Date
+entity jpa --class ProjetCommande --testAutomatically false
+field string --fieldName objetProjet
+field string --fieldName referencePROFORMA
+field string --fieldName referenceBonCommande
+field reference --fieldName clientConcerne --type ~.domain.Client
+field string --fieldName interlocuteurPrincipal
+entity jpa --class ~.domain.VeilleConcurrentielleProduit --testAutomatically false
+field reference --fieldName produit --type ~.domain.Produit
+field number --fieldName prixDeVente --type java.math.BigDecimal
+field string --fieldName distributeurPrincipal
+field number --fieldName niveauStockProduitChezConcurent --type java.math.BigDecimal
+focus --class ~.domain.Produit
+field string --fieldName marque
+entity jpa --class ~.domain.VCDistributeurConcurent
+field string --fieldName nomDistributeur
+field string --fieldName localisation
+// [failed] field set --fieldName produitsDistribues --type ~.domain.Pro
+field set --fieldName produitsDistribues --type ~.domain.Produit
+entity jpa --class ~.domain.Livraison --testAutomatically false
+field string --fieldName numeroBodereauLivraison
+field reference --fieldName client --type ~.domain.Client
+field string --fieldName dureLivraison
+entity jpa --class ~.domain.ConseilClient --testAutomatically false
+field string --fieldName objetDuConseil
+field reference --fieldName client --type ~.domain.Client
+field string interlocuteur
+entity jpa --class ~.domain.AssistanceCommerciale --testAutomatically false
+field string --fieldName objetAssistance
+field string --fieldName collegueAssiste
+entity jpa --class ~.domain.Montage --testAutomatically false
+field string --fieldName nomEquipement
+field string --fieldName duree
+field date --fieldName dateMontage --type java.util.Date
+entity jpa --class ~.domain.Installation --testAutomatically false
+field string --fieldName nomEquipement
+field reference --fieldName client --type ~.domain.Client
+field date --fieldName dateInstallation --type java.util.Date
+field reference --fieldName auteur --type ~.domain.Personnel
+entity jpa --class ~.domain.FormationUtilisateur --testAutomatically false
+field string --fieldName objetFormation
+field number --fieldName nbreInterlocuteur --type java.lang.Integer
+field string --fieldName dureFormation
+field date --fieldName dateFormation --type java.util.Date
+entity jpa --class ~.domain.AutoFormationEntreprise --testAutomatically false
+field string --fieldName objetAutoFormation
+field number --fieldName nbreInterlocuteur --type java.lang.Integer
+field string --fieldName duree
+field date --fieldName dateAutoFormation --type java.util.Date
+repository jpa --interface ~.repository.PersonnelRepository --entity ~.domain.Personnel
+repository jpa --interface ~.repository.AgenceRepository --entity ~.domain.Agence
+repository jpa --interface ~.repository.AutoFormationEntrepriseRepository --entity ~.domain.AutoFormationEntreprise
+repository jpa --interface ~.repository.ConseilClientRepository --entity ~.domain.ConseilClient
+repository jpa --interface ~.repository.FamilleProduitRepository --entity ~.domain.FamilleProduit
+repository jpa --interface ~.repository.InstallationRepository --entity ~.domain.Installation
+repository jpa --interface ~.repository.MonatageRepository --entity ~.domain.Montage
+repository jpa --interface ~.repository.MonatageRepository --entity ~.domain.Montage
+repository jpa --interface ~.repository.ProduitRepository --entity ~.domain.Produit
+repository jpa --interface ~.repository.RecrutementProspectRepository --entity ~.domain.RecrutementProspect
+repository jpa --interface ~.repository.SuiviStockProspectRepository --entity ~.domain.SuiviStock
+repository jpa --interface ~.repository.VeilleConcurentielleProduitRepository --entity ~.domain.VeilleConcurrentielleProduit
+repository jpa --interface ~.repository.AssistanceCommercialeRepository --entity ~.domain.AssistanceCommerciale
+repository jpa --interface ~.repository.ClientRepository --entity ~.domain.Client
+repository jpa --interface ~.repository.DossierCreanceRepository --entity ~.domain.DossierCreance
+repository jpa --interface ~.repository.FormationUtilisateurRepository --entity ~.domain.FormationUtilisateur
+repository jpa --interface ~.repository.LivraisonRepository --entity ~.domain.Livraison
+repository jpa --interface ~.repository.ProjetCommandeRepository --entity ~.domain.ProjetCommande
+repository jpa --interface ~.repository.VCDistributeurRepository --entity ~.domain.VCDistributeurConcurent
+repository jpa --interface ~.repository.VulgarisationProduitRepository --entity ~.domain.VulgarisationProduit
+focus --class ~.domain.Agence
+service all --interfacePackage com.polypharm.gescom.service 
+web mvc setup
+web mvc all --package ~.web
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-11-22 17:30:51
+help
+hint
+exit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-11-22 17:50:26
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-11-22 17:50:36
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-11-22 17:50:46
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-11-22 17:51:00
+project --topLevelPackage com.polypharm.gescom
+jpa setup --provider HIBERNATE --database H2_IN_MEMORY 
+entity jpa --class ~.domain.Client --activeRecord false
+field string --fieldName nom
+field string --fieldName telephone
+field string --fieldName numeroCarteContribuable
+field date --fieldName expirationCarteContribuable --type java.util.Date
+field string --fieldName regimeFiscal
+field date --fieldName expirationPatente --type java.util.Date
+field string --fieldName localisation
+field boolean --fieldName colleterTva
+field string --fieldName numAttestationNonRedevance
+field string --fieldName numAttestationSoumissionCNPS
+entity jpa --class ~.domain.DossierCreance
+field string --fieldName numBonCommande
+field string --fieldName numBonLivraison
+field string --fieldName numFacture
+field string --fieldName natureGarantie
+field string numContratCreance
+field date --fieldName dateEmission --type java.util.Date
+field date --fieldName dateEchance --type java.util.Date
+field reference --fieldName client --type ~.domain.Client
+entity jpa --class ~.domain.FamilleProduit
+field string --fieldName nom
+field string --fieldName description
+entity jpa --class ~.domain.Produit
+field string --fieldName nom
+field string --fieldName description
+field reference --fieldName familleProduit --type ~.domain.FamilleProduit
+entity jpa --class ~.domain.RecrutementProspect --activeRecord false
+field string denominationProspect
+field string fctionInterlocuteur
+field string --fieldName telephone
+field string email
+field string --fieldName boitePostale
+field string --fieldName localisation
+field date --fieldName dateRecrutement --type java.util.Date
+entity jpa --class ~.domain.VulgarisationProduit
+field reference --fieldName produitVulgarise --type ~.domain.Produit
+field reference --fieldName client --type ~.domain.Client
+field string nomInterlocuteur
+field string telInterlocuteur
+field date --fieldName dateVulgarisation --type java.util.Date
+enum type --class RoleName
+enum constant --name RESPONSABLE_COMMERCIALE
+enum constant --name RESPONSABLE_FORCE_DE_VENTE
+enum constant --name RESPONSABLE_COMPTABLE
+enum constant --name RESPONSABLE_AUDIT
+enum constant --name RESPONSABLE_CONTROLE
+enum constant --name RESPONSABLE_INFORMATIQUE
+entity jpa --class Personnel --testAutomatically false
+field string --fieldName nom
+field string --fieldName nomConnection
+field string --fieldName motDePass
+field string --fieldName nomComplet
+field string --fieldName telephone
+field string --fieldName email
+field enum --fieldName roleName --type ~.domain.RoleName
+entity jpa --class ~.domain.Agence
+field string --fieldName nom
+field string --fieldName description
+focus --class ~.domain.Personnel
+field reference --fieldName agence --type ~.domain.Agence
+focus --class ~.domain.DossierCreance
+field reference --fieldName auteur --type ~.domain.Personnel
+focus --class ~.domain.RecrutementProspect
+field reference --fieldName auteur --type ~.domain.Personnel
+focus --class ~.domain.VulgarisationProduit
+field reference --fieldName auteur --type ~.domain.Personnel
+entity jpa --class ~.domain.SuiviStock
+field reference --fieldName produit --type ~.domain.Produit
+field number --fieldName derniereQteCommande --type java.lang.Integer
+field number --fieldName qteStock --type java.lang.Integer
+field date --fieldName dateDerniereCommande --type java.util.Date
+field date --fieldName dateSuivi --type java.util.Date
+entity jpa --class ProjetCommande --testAutomatically false
+field string --fieldName objetProjet
+field string --fieldName referencePROFORMA
+field string --fieldName referenceBonCommande
+field reference --fieldName clientConcerne --type ~.domain.Client
+field string --fieldName interlocuteurPrincipal
+entity jpa --class ~.domain.VeilleConcurrentielleProduit --testAutomatically false
+field reference --fieldName produit --type ~.domain.Produit
+field number --fieldName prixDeVente --type java.math.BigDecimal
+field string --fieldName distributeurPrincipal
+field number --fieldName niveauStockProduitChezConcurent --type java.math.BigDecimal
+focus --class ~.domain.Produit
+field string --fieldName marque
+entity jpa --class ~.domain.VCDistributeurConcurent
+field string --fieldName nomDistributeur
+field string --fieldName localisation
+field set --fieldName produitsDistribues --type ~.domain.Produit
+entity jpa --class ~.domain.Livraison --testAutomatically false
+field string --fieldName numeroBodereauLivraison
+field reference --fieldName client --type ~.domain.Client
+field string --fieldName dureLivraison
+entity jpa --class ~.domain.ConseilClient --testAutomatically false
+field string --fieldName objetDuConseil
+field reference --fieldName client --type ~.domain.Client
+field string interlocuteur
+entity jpa --class ~.domain.AssistanceCommerciale --testAutomatically false
+field string --fieldName objetAssistance
+field string --fieldName collegueAssiste
+entity jpa --class ~.domain.Montage --testAutomatically false
+field string --fieldName nomEquipement
+field string --fieldName duree
+field date --fieldName dateMontage --type java.util.Date
+entity jpa --class ~.domain.Installation --testAutomatically false
+field string --fieldName nomEquipement
+field reference --fieldName client --type ~.domain.Client
+field date --fieldName dateInstallation --type java.util.Date
+field reference --fieldName auteur --type ~.domain.Personnel
+entity jpa --class ~.domain.FormationUtilisateur --testAutomatically false
+field string --fieldName objetFormation
+field number --fieldName nbreInterlocuteur --type java.lang.Integer
+field string --fieldName dureFormation
+field date --fieldName dateFormation --type java.util.Date
+entity jpa --class ~.domain.AutoFormationEntreprise --testAutomatically false
+field string --fieldName objetAutoFormation
+field number --fieldName nbreInterlocuteur --type java.lang.Integer
+field string --fieldName duree
+field date --fieldName dateAutoFormation --type java.util.Date
+repository jpa --interface ~.repository.PersonnelRepository --entity ~.domain.Personnel
+repository jpa --interface ~.repository.AgenceRepository --entity ~.domain.Agence
+repository jpa --interface ~.repository.AutoFormationEntrepriseRepository --entity ~.domain.AutoFormationEntreprise
+repository jpa --interface ~.repository.ConseilClientRepository --entity ~.domain.ConseilClient
+repository jpa --interface ~.repository.FamilleProduitRepository --entity ~.domain.FamilleProduit
+repository jpa --interface ~.repository.InstallationRepository --entity ~.domain.Installation
+repository jpa --interface ~.repository.MonatageRepository --entity ~.domain.Montage
+repository jpa --interface ~.repository.MonatageRepository --entity ~.domain.Montage
+repository jpa --interface ~.repository.ProduitRepository --entity ~.domain.Produit
+repository jpa --interface ~.repository.RecrutementProspectRepository --entity ~.domain.RecrutementProspect
+repository jpa --interface ~.repository.SuiviStockProspectRepository --entity ~.domain.SuiviStock
+repository jpa --interface ~.repository.VeilleConcurentielleProduitRepository --entity ~.domain.VeilleConcurrentielleProduit
+repository jpa --interface ~.repository.AssistanceCommercialeRepository --entity ~.domain.AssistanceCommerciale
+repository jpa --interface ~.repository.ClientRepository --entity ~.domain.Client
+repository jpa --interface ~.repository.DossierCreanceRepository --entity ~.domain.DossierCreance
+repository jpa --interface ~.repository.FormationUtilisateurRepository --entity ~.domain.FormationUtilisateur
+repository jpa --interface ~.repository.LivraisonRepository --entity ~.domain.Livraison
+repository jpa --interface ~.repository.ProjetCommandeRepository --entity ~.domain.ProjetCommande
+repository jpa --interface ~.repository.VCDistributeurRepository --entity ~.domain.VCDistributeurConcurent
+repository jpa --interface ~.repository.VulgarisationProduitRepository --entity ~.domain.VulgarisationProduit
+focus --class ~.domain.Agence
+service all --interfacePackage com.polypharm.gescom.service 
+web mvc setup
+web mvc all --package ~.web
+help
+hint
+exit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-11-22 17:51:22
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-11-22 17:51:22
+// script --file log.roo
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-11-22 17:51:22

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_Installation" items="${installations}" z="1NHPQQvtG2lPjWuqsKABKf0hVIM=">
+        <table:table data="${installations}" id="l_com_polypharm_gescom_domain_Installation" path="/installations" z="y9KJPBwwncQI/xYzLXsLEPoRKXs=">
+            <table:column id="c_com_polypharm_gescom_domain_Installation_nomEquipement" property="nomEquipement" z="lIJ7HOtXMxQK7cA/4C1M7ptLENs="/>
+            <table:column id="c_com_polypharm_gescom_domain_Installation_client" property="client" z="tKXi3R0nF55Qs8zB4hKmcBAATAM="/>
+            <table:column date="true" dateTimePattern="${installation_dateinstallation_date_format}" id="c_com_polypharm_gescom_domain_Installation_dateInstallation" property="dateInstallation" z="nALjgt+OmzWwOyclCtW0jSlufFM="/>
+            <table:column id="c_com_polypharm_gescom_domain_Installation_auteur" property="auteur" z="ZbvTtEGSLj2hxc3Kmh+CYJG3h2Q="/>
+        </table:table>
+    </page:list>
+</div>

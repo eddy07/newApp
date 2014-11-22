@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="agences/list">
+        <put-attribute name="body" value="/WEB-INF/views/agences/list.jspx"/>
+    </definition>
+<definition extends="default" name="agences/show">
+        <put-attribute name="body" value="/WEB-INF/views/agences/show.jspx"/>
+    </definition>
+<definition extends="default" name="agences/create">
+        <put-attribute name="body" value="/WEB-INF/views/agences/create.jspx"/>
+    </definition>
+<definition extends="default" name="agences/update">
+        <put-attribute name="body" value="/WEB-INF/views/agences/update.jspx"/>
+    </definition>
+</tiles-definitions>

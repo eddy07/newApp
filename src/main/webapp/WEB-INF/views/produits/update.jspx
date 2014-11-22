@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_polypharm_gescom_domain_Produit" modelAttribute="produit" path="/produits" versionField="Version" z="91Owfq/PTp8RQL5uvDWr2GNYZIc=">
+        <field:input field="nom" id="c_com_polypharm_gescom_domain_Produit_nom" z="g22RdAbe7m7gfR0fk3/CiJLrAvA="/>
+        <field:input field="description" id="c_com_polypharm_gescom_domain_Produit_description" z="az6kedzXWt7SJVVouY9PLQYN8NI="/>
+        <field:select field="familleProduit" id="c_com_polypharm_gescom_domain_Produit_familleProduit" itemValue="id" items="${familleproduits}" path="/familleproduits" z="fyC96/3tDXfwrYmBTClEWAwqEXw="/>
+        <field:input field="marque" id="c_com_polypharm_gescom_domain_Produit_marque" z="gSTHi8KN5elmN6Yii0OIoPUrG0Y="/>
+    </form:update>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_Produit" items="${produits}" z="ibTdhIxap2vTdpWmV6s93a2O4eg=">
+        <table:table data="${produits}" id="l_com_polypharm_gescom_domain_Produit" path="/produits" z="S2mezUX8xlYyu99X5ToEpeN11Aw=">
+            <table:column id="c_com_polypharm_gescom_domain_Produit_nom" property="nom" z="qh4oArUQFDNOHPlwpBuln88P4qA="/>
+            <table:column id="c_com_polypharm_gescom_domain_Produit_description" property="description" z="tb1broQVHVPbDbc3UDDORR9NExs="/>
+            <table:column id="c_com_polypharm_gescom_domain_Produit_familleProduit" property="familleProduit" z="gEbiBpS98T9/yzexuGuJTc+BTTY="/>
+            <table:column id="c_com_polypharm_gescom_domain_Produit_marque" property="marque" z="eDNd+Lptetxt98ejWV+cM3hipYw="/>
+        </table:table>
+    </page:list>
+</div>

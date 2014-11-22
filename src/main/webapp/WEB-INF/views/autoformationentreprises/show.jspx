@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_AutoFormationEntreprise" object="${autoformationentreprise}" path="/autoformationentreprises" z="b2p8dfX5UJlIkzw+xFYMsg0GHDY=">
+        <field:display field="objetAutoFormation" id="s_com_polypharm_gescom_domain_AutoFormationEntreprise_objetAutoFormation" object="${autoformationentreprise}" z="0nCKFNxQomz+ypbI7zjj8WF5Ees="/>
+        <field:display field="nbreInterlocuteur" id="s_com_polypharm_gescom_domain_AutoFormationEntreprise_nbreInterlocuteur" object="${autoformationentreprise}" z="lrWE2zWMKAqPF1EXKVa5uaCAevM="/>
+        <field:display field="duree" id="s_com_polypharm_gescom_domain_AutoFormationEntreprise_duree" object="${autoformationentreprise}" z="b3iC3tuTR6mGbJOeHGd3FoilWHw="/>
+        <field:display date="true" dateTimePattern="${autoFormationEntreprise_dateautoformation_date_format}" field="dateAutoFormation" id="s_com_polypharm_gescom_domain_AutoFormationEntreprise_dateAutoFormation" object="${autoformationentreprise}" z="+RyJR8iqSkk8bmZNSPobDBGRSlA="/>
+    </page:show>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_Personnel" object="${personnel}" path="/personnels" z="AVyIzYC5CU+vUDqmwgMQDozuCK8=">
+        <field:display field="nom" id="s_com_polypharm_gescom_domain_Personnel_nom" object="${personnel}" z="H/WiLK41gotWTusYGfbL5M4/h58="/>
+        <field:display field="nomConnection" id="s_com_polypharm_gescom_domain_Personnel_nomConnection" object="${personnel}" z="+ih9YQyHMNvWq9aSZTiUs3a2Zi0="/>
+        <field:display field="motDePass" id="s_com_polypharm_gescom_domain_Personnel_motDePass" object="${personnel}" z="5qNlP5SpdmV4R/HP/9Qv+YUN+aA="/>
+        <field:display field="nomComplet" id="s_com_polypharm_gescom_domain_Personnel_nomComplet" object="${personnel}" z="AC4NPT7zL++ALPqXyRuJuU5l5Fw="/>
+        <field:display field="telephone" id="s_com_polypharm_gescom_domain_Personnel_telephone" object="${personnel}" z="MbTlhSzMZikn+MxmO6ecQR6pJ54="/>
+        <field:display field="email" id="s_com_polypharm_gescom_domain_Personnel_email" object="${personnel}" z="yFUzd6oLXW4r7LI1svNw0DCDfEw="/>
+        <field:display field="roleName" id="s_com_polypharm_gescom_domain_Personnel_roleName" object="${personnel}" z="t1r+fJSCbO0I0seKnenulqAW+Vo="/>
+        <field:display field="agence" id="s_com_polypharm_gescom_domain_Personnel_agence" object="${personnel}" z="VPE8/OiCNlJMo1KqgryPGMCYnuQ="/>
+    </page:show>
+</div>

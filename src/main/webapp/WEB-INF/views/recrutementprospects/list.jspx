@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_RecrutementProspect" items="${recrutementprospects}" z="SqPfYQC3VEQk65BGH1LaC2+OV4w=">
+        <table:table data="${recrutementprospects}" id="l_com_polypharm_gescom_domain_RecrutementProspect" path="/recrutementprospects" z="V8dCKdyt9PnJD5Kb3FOGr9sl0vc=">
+            <table:column id="c_com_polypharm_gescom_domain_RecrutementProspect_denominationProspect" property="denominationProspect" z="itGOxSFoIX58a88JilC8LgcOnWc="/>
+            <table:column id="c_com_polypharm_gescom_domain_RecrutementProspect_fctionInterlocuteur" property="fctionInterlocuteur" z="26UpN3FF1YxhzUFL5JzKy/Swij4="/>
+            <table:column id="c_com_polypharm_gescom_domain_RecrutementProspect_telephone" property="telephone" z="4o1RB0buFNhmoa+kqbfP/pCjk/c="/>
+            <table:column id="c_com_polypharm_gescom_domain_RecrutementProspect_email" property="email" z="QysQaS3e/+ulwpk1B+IeNp5uEVU="/>
+            <table:column id="c_com_polypharm_gescom_domain_RecrutementProspect_boitePostale" property="boitePostale" z="GySbx1yRELANXkbDH4FF6awT1CU="/>
+            <table:column id="c_com_polypharm_gescom_domain_RecrutementProspect_localisation" property="localisation" z="IibrT6eM/AIyliOIytH1wDca9+E="/>
+        </table:table>
+    </page:list>
+</div>

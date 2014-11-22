@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_Personnel" items="${personnels}" z="6jG/Y0fu9xfsnT372OF8VTGU1GM=">
+        <table:table data="${personnels}" id="l_com_polypharm_gescom_domain_Personnel" path="/personnels" z="RV2bSx43lIp/AtdauaWZWntspyQ=">
+            <table:column id="c_com_polypharm_gescom_domain_Personnel_nom" property="nom" z="3GSi4aEkv75ON7f/urm1u/2zUas="/>
+            <table:column id="c_com_polypharm_gescom_domain_Personnel_nomConnection" property="nomConnection" z="cMbaDkbco3wG8cuoclv7Ptgpczg="/>
+            <table:column id="c_com_polypharm_gescom_domain_Personnel_motDePass" property="motDePass" z="v6e/zKJMBQVsp1mpi1j6mF056W8="/>
+            <table:column id="c_com_polypharm_gescom_domain_Personnel_nomComplet" property="nomComplet" z="LD58WDbddreY4Qiubg5K1B+VRGA="/>
+            <table:column id="c_com_polypharm_gescom_domain_Personnel_telephone" property="telephone" z="+uBx/8ypYsxfhytHdhWzYXmSNmE="/>
+            <table:column id="c_com_polypharm_gescom_domain_Personnel_email" property="email" z="sA9W8cN54jnVaWN6GGirA9Rz5uw="/>
+        </table:table>
+    </page:list>
+</div>

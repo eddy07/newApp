@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_FormationUtilisateur" items="${formationutilisateurs}" z="yXF+0NnJMW0elMragwChcvoSsaM=">
+        <table:table data="${formationutilisateurs}" id="l_com_polypharm_gescom_domain_FormationUtilisateur" path="/formationutilisateurs" z="yyfb5fEyybq6tZL0MTRdSgYDt1s=">
+            <table:column id="c_com_polypharm_gescom_domain_FormationUtilisateur_objetFormation" property="objetFormation" z="4uQODWhbcsHuKD7+JRgkol+JndE="/>
+            <table:column id="c_com_polypharm_gescom_domain_FormationUtilisateur_nbreInterlocuteur" property="nbreInterlocuteur" z="2bTJkCui6Z7Yh2DJxp4gXqzUDdY="/>
+            <table:column id="c_com_polypharm_gescom_domain_FormationUtilisateur_dureFormation" property="dureFormation" z="+angclqF9G9ktstGVMpgxFoaYW4="/>
+            <table:column date="true" dateTimePattern="${formationUtilisateur_dateformation_date_format}" id="c_com_polypharm_gescom_domain_FormationUtilisateur_dateFormation" property="dateFormation" z="JodNnByKHO9ZvRav0Utk9UHQHXQ="/>
+        </table:table>
+    </page:list>
+</div>

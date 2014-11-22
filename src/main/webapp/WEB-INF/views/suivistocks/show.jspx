@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_SuiviStock" object="${suivistock}" path="/suivistocks" z="miFAnh0Q3nlmupnWXb2WitpfJF4=">
+        <field:display field="produit" id="s_com_polypharm_gescom_domain_SuiviStock_produit" object="${suivistock}" z="9Hwi3X188tqcA+KuROs+vV7pB5Q="/>
+        <field:display field="derniereQteCommande" id="s_com_polypharm_gescom_domain_SuiviStock_derniereQteCommande" object="${suivistock}" z="/oSm6iMF2UO19++QKFXK8g34g68="/>
+        <field:display field="qteStock" id="s_com_polypharm_gescom_domain_SuiviStock_qteStock" object="${suivistock}" z="EHL2tKws2BsLIgVd/1b8M+bsTdI="/>
+        <field:display date="true" dateTimePattern="${suiviStock_datedernierecommande_date_format}" field="dateDerniereCommande" id="s_com_polypharm_gescom_domain_SuiviStock_dateDerniereCommande" object="${suivistock}" z="kJrAWkgFvaXjTHlfVWo69UtliIc="/>
+        <field:display date="true" dateTimePattern="${suiviStock_datesuivi_date_format}" field="dateSuivi" id="s_com_polypharm_gescom_domain_SuiviStock_dateSuivi" object="${suivistock}" z="ZrycSpwR3Vou6sbdWctG5DA58ZQ="/>
+    </page:show>
+</div>

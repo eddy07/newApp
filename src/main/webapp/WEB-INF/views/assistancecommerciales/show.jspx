@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_AssistanceCommerciale" object="${assistancecommerciale}" path="/assistancecommerciales" z="wgQ/SbmgO2qD7ld0vA4WS5R81dU=">
+        <field:display field="objetAssistance" id="s_com_polypharm_gescom_domain_AssistanceCommerciale_objetAssistance" object="${assistancecommerciale}" z="Y8k2s8C2G4Y0y69ezIZkp1kK1gM="/>
+        <field:display field="collegueAssiste" id="s_com_polypharm_gescom_domain_AssistanceCommerciale_collegueAssiste" object="${assistancecommerciale}" z="+LDlaaIZWj+NSWkkws7O5QzxudY="/>
+    </page:show>
+</div>

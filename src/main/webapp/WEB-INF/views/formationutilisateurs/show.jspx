@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_FormationUtilisateur" object="${formationutilisateur}" path="/formationutilisateurs" z="ccDt+yMIozz81Y8W7I9WLEaAo8I=">
+        <field:display field="objetFormation" id="s_com_polypharm_gescom_domain_FormationUtilisateur_objetFormation" object="${formationutilisateur}" z="slKawEqDybZSN1iPA6aPUAcElXA="/>
+        <field:display field="nbreInterlocuteur" id="s_com_polypharm_gescom_domain_FormationUtilisateur_nbreInterlocuteur" object="${formationutilisateur}" z="kmnoE4vdT4kcu6LDy49d8JvnQB8="/>
+        <field:display field="dureFormation" id="s_com_polypharm_gescom_domain_FormationUtilisateur_dureFormation" object="${formationutilisateur}" z="PqH3hs4/luh6KmGSLXkv7OtrQJ4="/>
+        <field:display date="true" dateTimePattern="${formationUtilisateur_dateformation_date_format}" field="dateFormation" id="s_com_polypharm_gescom_domain_FormationUtilisateur_dateFormation" object="${formationutilisateur}" z="hfDUEytx5zDh99pM+w9kwsWXgy8="/>
+    </page:show>
+</div>

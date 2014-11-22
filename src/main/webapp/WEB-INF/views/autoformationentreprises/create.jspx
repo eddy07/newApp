@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_polypharm_gescom_domain_AutoFormationEntreprise" modelAttribute="autoFormationEntreprise" path="/autoformationentreprises" render="${empty dependencies}" z="TuHOSZto2/0KJG2f2M77VMnA/m4=">
+        <field:input field="objetAutoFormation" id="c_com_polypharm_gescom_domain_AutoFormationEntreprise_objetAutoFormation" z="FJL5H1bTBQKkNX6+mHWBrja1UQI="/>
+        <field:input field="nbreInterlocuteur" id="c_com_polypharm_gescom_domain_AutoFormationEntreprise_nbreInterlocuteur" validationMessageCode="field_invalid_integer" z="bjEvexUVyFub/G3Jqt7kppAiOVk="/>
+        <field:input field="duree" id="c_com_polypharm_gescom_domain_AutoFormationEntreprise_duree" z="yvELDBT2w/MdyhdetzIzxrrNpOY="/>
+        <field:datetime dateTimePattern="${autoFormationEntreprise_dateautoformation_date_format}" field="dateAutoFormation" id="c_com_polypharm_gescom_domain_AutoFormationEntreprise_dateAutoFormation" z="/UtIjeXctzfn/tN1V4sBcT3Zs/g="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_polypharm_gescom_domain_AutoFormationEntreprise" render="${not empty dependencies}" z="ZcJnmnClqlHcHXeng8NbvRrUy9c="/>
+</div>

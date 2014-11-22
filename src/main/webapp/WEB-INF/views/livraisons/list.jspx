@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_Livraison" items="${livraisons}" z="eUPVKzV3TrGwIn/7d3H7z5pgPFQ=">
+        <table:table data="${livraisons}" id="l_com_polypharm_gescom_domain_Livraison" path="/livraisons" z="xsshyw5YD7G7p0Q0imUR+kH/o2E=">
+            <table:column id="c_com_polypharm_gescom_domain_Livraison_numeroBodereauLivraison" property="numeroBodereauLivraison" z="GqXox4KM6xfOKRHPfD+hHeQKt9w="/>
+            <table:column id="c_com_polypharm_gescom_domain_Livraison_client" property="client" z="Qxmdyn4yj5HDY9Zt6e+2O9N4ing="/>
+            <table:column id="c_com_polypharm_gescom_domain_Livraison_dureLivraison" property="dureLivraison" z="igRkCkn2DXjWi3ttK1OTXDLGi50="/>
+        </table:table>
+    </page:list>
+</div>

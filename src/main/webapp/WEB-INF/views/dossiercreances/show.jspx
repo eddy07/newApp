@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_DossierCreance" object="${dossiercreance}" path="/dossiercreances" z="Wm5WTHU8rttLU33tYLrdrMr7GfE=">
+        <field:display field="numBonCommande" id="s_com_polypharm_gescom_domain_DossierCreance_numBonCommande" object="${dossiercreance}" z="oOYc9ClCwk8CnDASKz3WVQFhLxE="/>
+        <field:display field="numBonLivraison" id="s_com_polypharm_gescom_domain_DossierCreance_numBonLivraison" object="${dossiercreance}" z="a48IhAWh1bGIjRL5EjmKEKNnpnw="/>
+        <field:display field="numFacture" id="s_com_polypharm_gescom_domain_DossierCreance_numFacture" object="${dossiercreance}" z="+MUnCda1mln5P0s7JEol2QsDoFI="/>
+        <field:display field="natureGarantie" id="s_com_polypharm_gescom_domain_DossierCreance_natureGarantie" object="${dossiercreance}" z="6qr8OIjmVmKiw4xO4IsxMB4mGKY="/>
+        <field:display field="numContratCreance" id="s_com_polypharm_gescom_domain_DossierCreance_numContratCreance" object="${dossiercreance}" z="hcziuhJS2+5KMyRiPEa91622kAg="/>
+        <field:display date="true" dateTimePattern="${dossierCreance_dateemission_date_format}" field="dateEmission" id="s_com_polypharm_gescom_domain_DossierCreance_dateEmission" object="${dossiercreance}" z="cvK2DFAdllt6jS1+Ptrk7V1it+M="/>
+        <field:display date="true" dateTimePattern="${dossierCreance_dateechance_date_format}" field="dateEchance" id="s_com_polypharm_gescom_domain_DossierCreance_dateEchance" object="${dossiercreance}" z="fl3C2UNLwlXfV/HQbP4OxH81/po="/>
+        <field:display field="client" id="s_com_polypharm_gescom_domain_DossierCreance_client" object="${dossiercreance}" z="mWb6l5S2VjLbD34nXBrEtpXcoJw="/>
+        <field:display field="auteur" id="s_com_polypharm_gescom_domain_DossierCreance_auteur" object="${dossiercreance}" z="ABxZt1vunWMO2huanAUudhGfY1s="/>
+    </page:show>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_Client" object="${client}" path="/clients" z="0mlEBad+ZgIRs80SLhBoPBEg1gU=">
+        <field:display field="nom" id="s_com_polypharm_gescom_domain_Client_nom" object="${client}" z="Jdwmz7BaBQpNJfBIVdzTD4QM1yk="/>
+        <field:display field="telephone" id="s_com_polypharm_gescom_domain_Client_telephone" object="${client}" z="NJ+DgYW8RHUQWRkua/x/rWvNVcs="/>
+        <field:display field="numeroCarteContribuable" id="s_com_polypharm_gescom_domain_Client_numeroCarteContribuable" object="${client}" z="qlyAyrCkFQ22LLJ5zUI8XG4y2ck="/>
+        <field:display date="true" dateTimePattern="${client_expirationcartecontribuable_date_format}" field="expirationCarteContribuable" id="s_com_polypharm_gescom_domain_Client_expirationCarteContribuable" object="${client}" z="9oMhvP+Pg0DiRxTAc8p1wDxoYK4="/>
+        <field:display field="regimeFiscal" id="s_com_polypharm_gescom_domain_Client_regimeFiscal" object="${client}" z="t9YY4WnjsKkR6YoT3MmctW4eb3I="/>
+        <field:display date="true" dateTimePattern="${client_expirationpatente_date_format}" field="expirationPatente" id="s_com_polypharm_gescom_domain_Client_expirationPatente" object="${client}" z="m/cCrIjogmKvVDW926OFy0Vq8No="/>
+        <field:display field="localisation" id="s_com_polypharm_gescom_domain_Client_localisation" object="${client}" z="N8UHO8yD0y3pKcVswUipY562fek="/>
+        <field:display field="colleterTva" id="s_com_polypharm_gescom_domain_Client_colleterTva" object="${client}" z="di1Wj7XHRqh/wBElL05XELbBd1Y="/>
+        <field:display field="numAttestationNonRedevance" id="s_com_polypharm_gescom_domain_Client_numAttestationNonRedevance" object="${client}" z="NAkZuD0nbiSAwy9LcRcHVs3A6dQ="/>
+        <field:display field="numAttestationSoumissionCNPS" id="s_com_polypharm_gescom_domain_Client_numAttestationSoumissionCNPS" object="${client}" z="6XVRNSYdC8hZBjqBlP1tss8mAV0="/>
+    </page:show>
+</div>

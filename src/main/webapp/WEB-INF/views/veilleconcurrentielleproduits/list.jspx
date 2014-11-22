@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_VeilleConcurrentielleProduit" items="${veilleconcurrentielleproduits}" z="nD5yGuPQz7vzhnUNFAZetamEZ3Y=">
+        <table:table data="${veilleconcurrentielleproduits}" id="l_com_polypharm_gescom_domain_VeilleConcurrentielleProduit" path="/veilleconcurrentielleproduits" z="zRIixA3CiBv3+WzRf0ZpbeA/Nj4=">
+            <table:column id="c_com_polypharm_gescom_domain_VeilleConcurrentielleProduit_produit" property="produit" z="qVmWofKlQX/IZnfhYhv9nzaeK1c="/>
+            <table:column id="c_com_polypharm_gescom_domain_VeilleConcurrentielleProduit_prixDeVente" property="prixDeVente" z="yr866/omjIX0rOGwaUPrmewxLfo="/>
+            <table:column id="c_com_polypharm_gescom_domain_VeilleConcurrentielleProduit_distributeurPrincipal" property="distributeurPrincipal" z="PZAcEUX8oVgQgdgaworBegy0Q2s="/>
+            <table:column id="c_com_polypharm_gescom_domain_VeilleConcurrentielleProduit_niveauStockProduitChezConcurent" property="niveauStockProduitChezConcurent" z="dNLVqPBcGFMtgAjn4Ws69x5gBnM="/>
+        </table:table>
+    </page:list>
+</div>

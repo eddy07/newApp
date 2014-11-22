@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_Installation" object="${installation}" path="/installations" z="RXQsPBiyxGXxvh/cj5ag2+xFrBw=">
+        <field:display field="nomEquipement" id="s_com_polypharm_gescom_domain_Installation_nomEquipement" object="${installation}" z="ogND54JfGeDgqknNl+ZkRzFEM00="/>
+        <field:display field="client" id="s_com_polypharm_gescom_domain_Installation_client" object="${installation}" z="Rko01GWGe9amiuHXDNbmEOXyLiU="/>
+        <field:display date="true" dateTimePattern="${installation_dateinstallation_date_format}" field="dateInstallation" id="s_com_polypharm_gescom_domain_Installation_dateInstallation" object="${installation}" z="CTs+enkttjwz18qaexni3Ary0fU="/>
+        <field:display field="auteur" id="s_com_polypharm_gescom_domain_Installation_auteur" object="${installation}" z="bOP6aj5bFT8cTowKnfyqhTIQQVU="/>
+    </page:show>
+</div>

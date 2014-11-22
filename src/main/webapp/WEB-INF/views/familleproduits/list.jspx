@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_polypharm_gescom_domain_FamilleProduit" items="${familleproduits}" z="D3BYl8j4E7NBrQmJMWy919vis64=">
+        <table:table data="${familleproduits}" id="l_com_polypharm_gescom_domain_FamilleProduit" path="/familleproduits" z="GFvckLa8shyNj8+rh31WNbWfv6w=">
+            <table:column id="c_com_polypharm_gescom_domain_FamilleProduit_nom" property="nom" z="VvzsbflzDBvGKA88zsxERhzWvbs="/>
+            <table:column id="c_com_polypharm_gescom_domain_FamilleProduit_description" property="description" z="AyGPDieOeTDHsCoefWjIkIyhb0M="/>
+        </table:table>
+    </page:list>
+</div>

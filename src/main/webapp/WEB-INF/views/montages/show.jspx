@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_Montage" object="${montage}" path="/montages" z="y7Up25LJ+A0MSeLhu1GM+E+Plkk=">
+        <field:display field="nomEquipement" id="s_com_polypharm_gescom_domain_Montage_nomEquipement" object="${montage}" z="u92uiuwyurm5N75UgxjViD0ZxQc="/>
+        <field:display field="duree" id="s_com_polypharm_gescom_domain_Montage_duree" object="${montage}" z="B+ffNaK1ySzlINuWAa40Bn9zzd0="/>
+        <field:display date="true" dateTimePattern="${montage_datemontage_date_format}" field="dateMontage" id="s_com_polypharm_gescom_domain_Montage_dateMontage" object="${montage}" z="iY5yosUGNE9IeeJVit5AnF1iek0="/>
+    </page:show>
+</div>

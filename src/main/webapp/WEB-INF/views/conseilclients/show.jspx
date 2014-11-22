@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_polypharm_gescom_domain_ConseilClient" object="${conseilclient}" path="/conseilclients" z="QZhMwhozqsyY2O7KyJk6x9EDJNo=">
+        <field:display field="objetDuConseil" id="s_com_polypharm_gescom_domain_ConseilClient_objetDuConseil" object="${conseilclient}" z="B3mxGo2F3i9ERGxJwyMMkhlKuXw="/>
+        <field:display field="client" id="s_com_polypharm_gescom_domain_ConseilClient_client" object="${conseilclient}" z="2YknB1pZZbkYgsAGE4APJ6zEu38="/>
+        <field:display field="interlocuteur" id="s_com_polypharm_gescom_domain_ConseilClient_interlocuteur" object="${conseilclient}" z="uUfqRfzrQ1Ffzm/UqQtHMZnXWmE="/>
+    </page:show>
+</div>
