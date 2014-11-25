@@ -49,6 +49,7 @@ privileged aspect PersonnelController_Roo_Controller {
     
     @RequestMapping(value = "/{id}", produces = "text/html")
     public String PersonnelController.show(@PathVariable("id") Long id, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("personnel", personnelService.findPersonnel(id));
         uiModel.addAttribute("itemId", id);
         return "personnels/show";
@@ -65,6 +66,7 @@ privileged aspect PersonnelController_Roo_Controller {
         } else {
             uiModel.addAttribute("personnels", personnelService.findAllPersonnels());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "personnels/list";
     }
     
@@ -95,8 +97,14 @@ privileged aspect PersonnelController_Roo_Controller {
         return "redirect:/personnels";
     }
     
+    void PersonnelController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("personnel_accountexpiration_date_format", "dd-MM-yyyy");
+        uiModel.addAttribute("personnel_credentialexpiration_date_format", "dd-MM-yyyy");
+    }
+    
     void PersonnelController.populateEditForm(Model uiModel, Personnel personnel) {
         uiModel.addAttribute("personnel", personnel);
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("agences", agenceService.findAllAgences());
         uiModel.addAttribute("rolenames", Arrays.asList(RoleName.values()));
     }

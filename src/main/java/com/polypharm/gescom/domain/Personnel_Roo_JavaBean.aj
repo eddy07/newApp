@@ -6,6 +6,7 @@ package com.polypharm.gescom.domain;
 import com.polypharm.gescom.domain.Agence;
 import com.polypharm.gescom.domain.Personnel;
 import com.polypharm.gescom.domain.RoleName;
+import java.util.Date;
 
 privileged aspect Personnel_Roo_JavaBean {
     
@@ -71,6 +72,38 @@ privileged aspect Personnel_Roo_JavaBean {
     
     public void Personnel.setAgence(Agence agence) {
         this.agence = agence;
+    }
+    
+    public Boolean Personnel.getDisableLogin() {
+        return this.disableLogin;
+    }
+    
+    public void Personnel.setDisableLogin(Boolean disableLogin) {
+        this.disableLogin = disableLogin;
+    }
+    
+    public Date Personnel.getAccountExpiration() {
+        return this.accountExpiration;
+    }
+    
+    public void Personnel.setAccountExpiration(Date accountExpiration) {
+        this.accountExpiration = accountExpiration;
+    }
+    
+    public Date Personnel.getCredentialExpiration() {
+        return this.credentialExpiration;
+    }
+    
+    public void Personnel.setCredentialExpiration(Date credentialExpiration) {
+        this.credentialExpiration = credentialExpiration;
+    }
+    
+    public Boolean Personnel.getAccountLocked() {
+        return this.accountLocked;
+    }
+    
+    public void Personnel.setAccountLocked(Boolean accountLocked) {
+        this.accountLocked = accountLocked;
     }
     
 }

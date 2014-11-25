@@ -4,4 +4,4 @@ bin/
 .settings/
 settings.xml
 *.~
-
+/.classpath

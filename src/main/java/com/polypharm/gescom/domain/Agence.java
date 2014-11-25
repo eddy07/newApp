@@ -15,4 +15,14 @@ public class Agence {
     /**
      */
     private String description;
+    
+    public Agence() {
+	}
+
+	public Agence(String nom, String description) {
+		super();
+		this.nom = nom;
+		this.description = description;
+	}
+    
 }
