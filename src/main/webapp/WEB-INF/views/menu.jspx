@@ -1,83 +1,117 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+<div xmlns:sec="http://www.springframework.org/security/tags" xmlns:spring="http://www.springframework.org/tags" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_familleproduit" z="GxA7BfO3xc1lQDIKQgWdAJvJnNU=">
-            <menu:item id="i_familleproduit_new" messageCode="global_menu_new" url="/familleproduits?form" z="RQBig+w/eLLh0jCvVG3rTTFC3dA="/>
-            <menu:item id="i_familleproduit_list" messageCode="global_menu_list" url="/familleproduits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="tVvGQKx5VJgXDMSHGTMcvR0gl+w="/>
-        </menu:category>
-        <menu:category id="c_recrutementprospect" z="uaM2IIVuWV1KGr2MNWmU6R71elw=">
-            <menu:item id="i_recrutementprospect_new" messageCode="global_menu_new" url="/recrutementprospects?form" z="3WxAsiXIkO5qCTKJGtMwO3M3GOs="/>
-            <menu:item id="i_recrutementprospect_list" messageCode="global_menu_list" url="/recrutementprospects?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5+3oNSNAd/zWVKjr3UZA4uzPv8U="/>
-        </menu:category>
-        <menu:category id="c_vulgarisationproduit" z="lUIKd/nb7vdqPG0KXmMuhF8RMno=">
-            <menu:item id="i_vulgarisationproduit_new" messageCode="global_menu_new" url="/vulgarisationproduits?form" z="1xI5l7Hy7+vaC3MDLGCJLx8EWwc="/>
-            <menu:item id="i_vulgarisationproduit_list" messageCode="global_menu_list" url="/vulgarisationproduits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="w6stMUOMbGiQTGFmk2oBD2MFKfY="/>
-        </menu:category>
-        <menu:category id="c_veilleconcurrentielleproduit" z="FIvwPQTfe4REulvV1VyNVPF2+s8=">
-            <menu:item id="i_veilleconcurrentielleproduit_new" messageCode="global_menu_new" url="/veilleconcurrentielleproduits?form" z="bh7mjySvjEnaHRkL3YVnkrlHGjs="/>
-            <menu:item id="i_veilleconcurrentielleproduit_list" messageCode="global_menu_list" url="/veilleconcurrentielleproduits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2KCXxaR0jA8ll8oBHnRgd5k+zQE="/>
-        </menu:category>
-        <menu:category id="c_assistancecommerciale" z="X0Kd2MlUWdT0HSXrap198QqH3uc=">
-            <menu:item id="i_assistancecommerciale_new" messageCode="global_menu_new" url="/assistancecommerciales?form" z="Ap3/G92AC8BGoCmwK6RprtZPSIA="/>
-            <menu:item id="i_assistancecommerciale_list" messageCode="global_menu_list" url="/assistancecommerciales?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Xjpv6XPI9xCZW7+6yS6g8QRXA3M="/>
-        </menu:category>
-        <menu:category id="c_dossiercreance" z="K7YjiEPoYwJFxIIZXXAWjulN21g=">
-            <menu:item id="i_dossiercreance_new" messageCode="global_menu_new" url="/dossiercreances?form" z="y7sf4BbXzrgnVcPdQ7LYOIjdxA8="/>
-            <menu:item id="i_dossiercreance_list" messageCode="global_menu_list" url="/dossiercreances?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ek1wcGeCLkfRqAmtAOdSl7O7SRo="/>
-        </menu:category>
-        <menu:category id="c_suivistock" z="5PXgwh5I68sEcVk8S3Mf2/pOAIU=">
-            <menu:item id="i_suivistock_new" messageCode="global_menu_new" url="/suivistocks?form" z="yku1ZOX+3TLmfH/Mt8HUiOb2Lnw="/>
-            <menu:item id="i_suivistock_list" messageCode="global_menu_list" url="/suivistocks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="BoiKK/0cSSMG6UaXsKFM/zenLS4="/>
-        </menu:category>
-        <menu:category id="c_autoformationentreprise" z="RfyB3DOQ3SYldGxItaelL356buY=">
-            <menu:item id="i_autoformationentreprise_new" messageCode="global_menu_new" url="/autoformationentreprises?form" z="6ZJu7gS2+W/ntBe3dfqeAmzuidg="/>
-            <menu:item id="i_autoformationentreprise_list" messageCode="global_menu_list" url="/autoformationentreprises?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ui4ntDcIH/KEFTxp4wU/iKY+5Y0="/>
-        </menu:category>
-        <menu:category id="c_conseilclient" z="koZk33W00fEMqatQYrzfZmf8+yg=">
-            <menu:item id="i_conseilclient_new" messageCode="global_menu_new" url="/conseilclients?form" z="JgZ6XWKHNm2p6aoRx2gegkNZXdg="/>
-            <menu:item id="i_conseilclient_list" messageCode="global_menu_list" url="/conseilclients?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Z6bl1SX8WGU51n+eJ8qCjHPsY64="/>
-        </menu:category>
-        <menu:category id="c_projetcommande" z="O862c4jTOPndBBOFR10jQFfnbUY=">
-            <menu:item id="i_projetcommande_new" messageCode="global_menu_new" url="/projetcommandes?form" z="ZkLaWzP2X2oz+mUeWPuk5nGk9yQ="/>
-            <menu:item id="i_projetcommande_list" messageCode="global_menu_list" url="/projetcommandes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5px4r8se+T58WtQITrX1F/YbXt8="/>
-        </menu:category>
-        <menu:category id="c_agence" z="VF+wbsYQwmhJIZw2X3XIEo+Nc2g=">
-            <menu:item id="i_agence_new" messageCode="global_menu_new" url="/agences?form" z="dNvMqj313DJ7vUMB8kg5OdjGxfk="/>
-            <menu:item id="i_agence_list" messageCode="global_menu_list" url="/agences?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Mo8SZ6hntqMkGSVKd9dC42qPu4E="/>
-        </menu:category>
-        <menu:category id="c_installation" z="shV0B5UHMgjEnAJnojaDM6FqN4o=">
-            <menu:item id="i_installation_new" messageCode="global_menu_new" url="/installations?form" z="7YTwC6+Gl550+T4y4Hm9qbaKm24="/>
-            <menu:item id="i_installation_list" messageCode="global_menu_list" url="/installations?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ldha6cbo2vFHYGMaEft1URmRZqU="/>
-        </menu:category>
-        <menu:category id="c_montage" z="a2hNj0gGd5xdUo+65fNv01Rzd+c=">
-            <menu:item id="i_montage_new" messageCode="global_menu_new" url="/montages?form" z="2WHXFZqqHLfKrVF5qnZkeMiwnMU="/>
-            <menu:item id="i_montage_list" messageCode="global_menu_list" url="/montages?page=1&amp;size=${empty param.size ? 10 : param.size}" z="IjNyvDiz25N7+y5OH84sHWHWWAY="/>
-        </menu:category>
-        <menu:category id="c_livraison" z="Dnl1ctW81rTNKAqiXBr4wFu0nWQ=">
-            <menu:item id="i_livraison_new" messageCode="global_menu_new" url="/livraisons?form" z="t6W/xD/kViUI/3cjFxosxaBh0r4="/>
-            <menu:item id="i_livraison_list" messageCode="global_menu_list" url="/livraisons?page=1&amp;size=${empty param.size ? 10 : param.size}" z="WbmM/+7ReLSjTl+QcD6knE47ZFM="/>
-        </menu:category>
-        <menu:category id="c_formationutilisateur" z="6RYOjHxWw61hiGCOrSCtNcB+CIg=">
-            <menu:item id="i_formationutilisateur_new" messageCode="global_menu_new" url="/formationutilisateurs?form" z="cfLImxe1sLwzDbhYbhyP3p06eBI="/>
-            <menu:item id="i_formationutilisateur_list" messageCode="global_menu_list" url="/formationutilisateurs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="0vAHeXI/ZNi7Tg9lW8B0zo+hZtY="/>
-        </menu:category>
-        <menu:category id="c_produit" z="L4FwOOfkWY427TT8GJsu+W98zz4=">
-            <menu:item id="i_produit_new" messageCode="global_menu_new" url="/produits?form" z="kEQMseRIWklOxy8kklszEV//DG0="/>
-            <menu:item id="i_produit_list" messageCode="global_menu_list" url="/produits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lBI1MBnu847VcwIaf2Ras5Qw41M="/>
-        </menu:category>
-        <menu:category id="c_client" z="TjeLu8x0oS98tSiRzdPNDOc8U+c=">
-            <menu:item id="i_client_new" messageCode="global_menu_new" url="/clients?form" z="0rEWYB2Yq6qokJif3zv05zcXpXk="/>
-            <menu:item id="i_client_list" messageCode="global_menu_list" url="/clients?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/DxsyzfFyvp93UEW0WcXvtjs4zo="/>
-        </menu:category>
-        <menu:category id="c_vcdistributeurconcurent" z="b3dOElBds8cIqgZ4KcgoH6x4jbY=">
-            <menu:item id="i_vcdistributeurconcurent_new" messageCode="global_menu_new" url="/vcdistributeurconcurents?form" z="7fYeAEgkbWqP4PHM8RdO0voKyT8="/>
-            <menu:item id="i_vcdistributeurconcurent_list" messageCode="global_menu_list" url="/vcdistributeurconcurents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Q6PSjT7jqrSzwNuwTlE4XrP7HMA="/>
-        </menu:category>
-        <menu:category id="c_personnel" z="cFeSx8eA+oURnlCOkO154dD6W4w=">
-            <menu:item id="i_personnel_new" messageCode="global_menu_new" url="/personnels?form" z="D1aeI4y3xEtYQoAFkJG6f+/x0dQ="/>
-            <menu:item id="i_personnel_list" messageCode="global_menu_list" url="/personnels?page=1&amp;size=${empty param.size ? 10 : param.size}" z="pPna/ycOjlBRdi7Zo1pJlwRrdic="/>
-        </menu:category>
+    
+    	<sec:authorize ifAnyGranted="RESPONSABLE_COMMERCIALE">
+    		<menu:category id="c_recrutementprospect" z="uaM2IIVuWV1KGr2MNWmU6R71elw=">
+	            <menu:item id="i_recrutementprospect_new" messageCode="global_menu_new" url="/recrutementprospects?form" z="3WxAsiXIkO5qCTKJGtMwO3M3GOs="/>
+	            <menu:item id="i_recrutementprospect_list" messageCode="global_menu_list" url="/recrutementprospects?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5+3oNSNAd/zWVKjr3UZA4uzPv8U="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_assistancecommerciale" z="X0Kd2MlUWdT0HSXrap198QqH3uc=">
+	            <menu:item id="i_assistancecommerciale_new" messageCode="global_menu_new" url="/assistancecommerciales?form" z="Ap3/G92AC8BGoCmwK6RprtZPSIA="/>
+	            <menu:item id="i_assistancecommerciale_list" messageCode="global_menu_list" url="/assistancecommerciales?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Xjpv6XPI9xCZW7+6yS6g8QRXA3M="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_conseilclient" z="koZk33W00fEMqatQYrzfZmf8+yg=">
+	            <menu:item id="i_conseilclient_new" messageCode="global_menu_new" url="/conseilclients?form" z="JgZ6XWKHNm2p6aoRx2gegkNZXdg="/>
+	            <menu:item id="i_conseilclient_list" messageCode="global_menu_list" url="/conseilclients?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Z6bl1SX8WGU51n+eJ8qCjHPsY64="/>
+	        </menu:category>
+	        
+	        <menu:category id="c_client" z="TjeLu8x0oS98tSiRzdPNDOc8U+c=">
+	            <menu:item id="i_client_new" messageCode="global_menu_new" url="/clients?form" z="0rEWYB2Yq6qokJif3zv05zcXpXk="/>
+	            <menu:item id="i_client_list" messageCode="global_menu_list" url="/clients?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/DxsyzfFyvp93UEW0WcXvtjs4zo="/>
+	        </menu:category>
+    	</sec:authorize>
+    	<sec:authorize ifAnyGranted="RESPONSABLE_FORCE_DE_VENTE">
+	    		
+	        <menu:category id="c_vulgarisationproduit" z="lUIKd/nb7vdqPG0KXmMuhF8RMno=">
+	            <menu:item id="i_vulgarisationproduit_new" messageCode="global_menu_new" url="/vulgarisationproduits?form" z="1xI5l7Hy7+vaC3MDLGCJLx8EWwc="/>
+	            <menu:item id="i_vulgarisationproduit_list" messageCode="global_menu_list" url="/vulgarisationproduits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="w6stMUOMbGiQTGFmk2oBD2MFKfY="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_suivistock" z="5PXgwh5I68sEcVk8S3Mf2/pOAIU=">
+	            <menu:item id="i_suivistock_new" messageCode="global_menu_new" url="/suivistocks?form" z="yku1ZOX+3TLmfH/Mt8HUiOb2Lnw="/>
+	            <menu:item id="i_suivistock_list" messageCode="global_menu_list" url="/suivistocks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="BoiKK/0cSSMG6UaXsKFM/zenLS4="/>
+	        </menu:category>
+    	</sec:authorize>
+    	<sec:authorize ifAnyGranted="RESPONSABLE_COMPTABLE">
+	    		
+	        <menu:category id="c_dossiercreance" z="K7YjiEPoYwJFxIIZXXAWjulN21g=">
+	            <menu:item id="i_dossiercreance_new" messageCode="global_menu_new" url="/dossiercreances?form" z="y7sf4BbXzrgnVcPdQ7LYOIjdxA8="/>
+	            <menu:item id="i_dossiercreance_list" messageCode="global_menu_list" url="/dossiercreances?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ek1wcGeCLkfRqAmtAOdSl7O7SRo="/>
+	        </menu:category>
+    	</sec:authorize>
+    	
+    	<sec:authorize ifAnyGranted="RESPONSABLE_AUDIT">
+	    		
+	        <menu:category id="c_veilleconcurrentielleproduit" z="FIvwPQTfe4REulvV1VyNVPF2+s8=">
+	            <menu:item id="i_veilleconcurrentielleproduit_new" messageCode="global_menu_new" url="/veilleconcurrentielleproduits?form" z="bh7mjySvjEnaHRkL3YVnkrlHGjs="/>
+	            <menu:item id="i_veilleconcurrentielleproduit_list" messageCode="global_menu_list" url="/veilleconcurrentielleproduits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2KCXxaR0jA8ll8oBHnRgd5k+zQE="/>
+	        </menu:category>
+	        
+	        <menu:category id="c_produit" z="L4FwOOfkWY427TT8GJsu+W98zz4=">
+	            <menu:item id="i_produit_new" messageCode="global_menu_new" url="/produits?form" z="kEQMseRIWklOxy8kklszEV//DG0="/>
+	            <menu:item id="i_produit_list" messageCode="global_menu_list" url="/produits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lBI1MBnu847VcwIaf2Ras5Qw41M="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_vcdistributeurconcurent" z="b3dOElBds8cIqgZ4KcgoH6x4jbY=">
+	            <menu:item id="i_vcdistributeurconcurent_new" messageCode="global_menu_new" url="/vcdistributeurconcurents?form" z="7fYeAEgkbWqP4PHM8RdO0voKyT8="/>
+	            <menu:item id="i_vcdistributeurconcurent_list" messageCode="global_menu_list" url="/vcdistributeurconcurents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Q6PSjT7jqrSzwNuwTlE4XrP7HMA="/>
+	        </menu:category>
+    	</sec:authorize>
+    	
+    	<sec:authorize ifAnyGranted="RESPONSABLE_CONTROLE">
+	    	
+	        <menu:category id="c_familleproduit" z="GxA7BfO3xc1lQDIKQgWdAJvJnNU=">
+	            <menu:item id="i_familleproduit_new" messageCode="global_menu_new" url="/familleproduits?form" z="RQBig+w/eLLh0jCvVG3rTTFC3dA="/>
+	            <menu:item id="i_familleproduit_list" messageCode="global_menu_list" url="/familleproduits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="tVvGQKx5VJgXDMSHGTMcvR0gl+w="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_projetcommande" z="O862c4jTOPndBBOFR10jQFfnbUY=">
+	            <menu:item id="i_projetcommande_new" messageCode="global_menu_new" url="/projetcommandes?form" z="ZkLaWzP2X2oz+mUeWPuk5nGk9yQ="/>
+	            <menu:item id="i_projetcommande_list" messageCode="global_menu_list" url="/projetcommandes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5px4r8se+T58WtQITrX1F/YbXt8="/>
+	        </menu:category>
+	        
+	        <menu:category id="c_livraison" z="Dnl1ctW81rTNKAqiXBr4wFu0nWQ=">
+	            <menu:item id="i_livraison_new" messageCode="global_menu_new" url="/livraisons?form" z="t6W/xD/kViUI/3cjFxosxaBh0r4="/>
+	            <menu:item id="i_livraison_list" messageCode="global_menu_list" url="/livraisons?page=1&amp;size=${empty param.size ? 10 : param.size}" z="WbmM/+7ReLSjTl+QcD6knE47ZFM="/>
+	        </menu:category>
+    	</sec:authorize>
+    	
+    	<sec:authorize ifAnyGranted="RESPONSABLE_INFORMATIQUE">
+	        <menu:category id="c_autoformationentreprise" z="RfyB3DOQ3SYldGxItaelL356buY=">
+	            <menu:item id="i_autoformationentreprise_new" messageCode="global_menu_new" url="/autoformationentreprises?form" z="6ZJu7gS2+W/ntBe3dfqeAmzuidg="/>
+	            <menu:item id="i_autoformationentreprise_list" messageCode="global_menu_list" url="/autoformationentreprises?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ui4ntDcIH/KEFTxp4wU/iKY+5Y0="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_agence" z="VF+wbsYQwmhJIZw2X3XIEo+Nc2g=">
+	            <menu:item id="i_agence_new" messageCode="global_menu_new" url="/agences?form" z="dNvMqj313DJ7vUMB8kg5OdjGxfk="/>
+	            <menu:item id="i_agence_list" messageCode="global_menu_list" url="/agences?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Mo8SZ6hntqMkGSVKd9dC42qPu4E="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_installation" z="shV0B5UHMgjEnAJnojaDM6FqN4o=">
+	            <menu:item id="i_installation_new" messageCode="global_menu_new" url="/installations?form" z="7YTwC6+Gl550+T4y4Hm9qbaKm24="/>
+	            <menu:item id="i_installation_list" messageCode="global_menu_list" url="/installations?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ldha6cbo2vFHYGMaEft1URmRZqU="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_montage" z="a2hNj0gGd5xdUo+65fNv01Rzd+c=">
+	            <menu:item id="i_montage_new" messageCode="global_menu_new" url="/montages?form" z="2WHXFZqqHLfKrVF5qnZkeMiwnMU="/>
+	            <menu:item id="i_montage_list" messageCode="global_menu_list" url="/montages?page=1&amp;size=${empty param.size ? 10 : param.size}" z="IjNyvDiz25N7+y5OH84sHWHWWAY="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_formationutilisateur" z="6RYOjHxWw61hiGCOrSCtNcB+CIg=">
+	            <menu:item id="i_formationutilisateur_new" messageCode="global_menu_new" url="/formationutilisateurs?form" z="cfLImxe1sLwzDbhYbhyP3p06eBI="/>
+	            <menu:item id="i_formationutilisateur_list" messageCode="global_menu_list" url="/formationutilisateurs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="0vAHeXI/ZNi7Tg9lW8B0zo+hZtY="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_personnel" z="cFeSx8eA+oURnlCOkO154dD6W4w=">
+	            <menu:item id="i_personnel_new" messageCode="global_menu_new" url="/personnels?form" z="D1aeI4y3xEtYQoAFkJG6f+/x0dQ="/>
+	            <menu:item id="i_personnel_list" messageCode="global_menu_list" url="/personnels?page=1&amp;size=${empty param.size ? 10 : param.size}" z="pPna/ycOjlBRdi7Zo1pJlwRrdic="/>
+	        </menu:category>
+    	</sec:authorize>
+    	
     </menu:menu>
 </div>
