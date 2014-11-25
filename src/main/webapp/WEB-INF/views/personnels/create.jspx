@@ -11,6 +11,10 @@
         <field:input field="email" id="c_com_polypharm_gescom_domain_Personnel_email" validationMessageCode="field_invalid_email" z="80U20aketEQHA4V+ON9IFgYtmck="/>
         <field:select field="roleName" id="c_com_polypharm_gescom_domain_Personnel_roleName" items="${rolenames}" path="rolenames" z="bmSub1HbGwWLwRidOe22Va/nNGs="/>
         <field:select field="agence" id="c_com_polypharm_gescom_domain_Personnel_agence" itemValue="id" items="${agences}" path="/agences" z="j1GK2rNlQVqPfMAdpmLjsMSBduo="/>
+        <field:checkbox field="disableLogin" id="c_com_polypharm_gescom_domain_Personnel_disableLogin" z="TFTzgcYfLZYXQtEzpNGX36Mcado="/>
+        <field:datetime dateTimePattern="${personnel_accountexpiration_date_format}" field="accountExpiration" id="c_com_polypharm_gescom_domain_Personnel_accountExpiration" z="V+5YQZEbwPEKCiUj9C3JNlWLvwQ="/>
+        <field:datetime dateTimePattern="${personnel_credentialexpiration_date_format}" field="credentialExpiration" id="c_com_polypharm_gescom_domain_Personnel_credentialExpiration" z="ho+1nvyyaai1ZM0pq1P1+1NSinQ="/>
+        <field:checkbox field="accountLocked" id="c_com_polypharm_gescom_domain_Personnel_accountLocked" z="Kbpz9fooTiCkEA13jLxfTZ8rQxA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_polypharm_gescom_domain_Personnel" render="${not empty dependencies}" z="Nd8VP6qCli72uGdpwcghRMNRObE="/>
 </div>

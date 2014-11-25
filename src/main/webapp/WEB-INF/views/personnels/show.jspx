@@ -11,5 +11,9 @@
         <field:display field="email" id="s_com_polypharm_gescom_domain_Personnel_email" object="${personnel}" z="yFUzd6oLXW4r7LI1svNw0DCDfEw="/>
         <field:display field="roleName" id="s_com_polypharm_gescom_domain_Personnel_roleName" object="${personnel}" z="t1r+fJSCbO0I0seKnenulqAW+Vo="/>
         <field:display field="agence" id="s_com_polypharm_gescom_domain_Personnel_agence" object="${personnel}" z="VPE8/OiCNlJMo1KqgryPGMCYnuQ="/>
+        <field:display field="disableLogin" id="s_com_polypharm_gescom_domain_Personnel_disableLogin" object="${personnel}" z="HBjXIWvHc90wJ7y4PN3cYqNrEBA="/>
+        <field:display date="true" dateTimePattern="${personnel_accountexpiration_date_format}" field="accountExpiration" id="s_com_polypharm_gescom_domain_Personnel_accountExpiration" object="${personnel}" z="7CmAMHMz1zq4pwmuX1+YSYMuuWo="/>
+        <field:display date="true" dateTimePattern="${personnel_credentialexpiration_date_format}" field="credentialExpiration" id="s_com_polypharm_gescom_domain_Personnel_credentialExpiration" object="${personnel}" z="/Eapl7dRPTn74R5KwRkaDQFqgCU="/>
+        <field:display field="accountLocked" id="s_com_polypharm_gescom_domain_Personnel_accountLocked" object="${personnel}" z="/2X653+tx0H0bZZ+lz9XKk6bN8o="/>
     </page:show>
 </div>
