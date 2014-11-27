@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:sec="http://www.springframework.org/security/tags" xmlns:spring="http://www.springframework.org/tags" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="">
+    
+    	
+	        <menu:category id="c_autoformationentreprise" z="RfyB3DOQ3SYldGxItaelL356buY=">
+	            <menu:item id="i_autoformationentreprise_new" messageCode="global_menu_new" url="/autoformationentreprises?form" z="6ZJu7gS2+W/ntBe3dfqeAmzuidg="/>
+	            <menu:item id="i_autoformationentreprise_list" messageCode="global_menu_list" url="/autoformationentreprises?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ui4ntDcIH/KEFTxp4wU/iKY+5Y0="/>
+	        </menu:category>
+		        
+	       
+	        <menu:category id="c_installation" z="shV0B5UHMgjEnAJnojaDM6FqN4o=">
+	            <menu:item id="i_installation_new" messageCode="global_menu_new" url="/installations?form" z="7YTwC6+Gl550+T4y4Hm9qbaKm24="/>
+	            <menu:item id="i_installation_list" messageCode="global_menu_list" url="/installations?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ldha6cbo2vFHYGMaEft1URmRZqU="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_montage" z="a2hNj0gGd5xdUo+65fNv01Rzd+c=">
+	            <menu:item id="i_montage_new" messageCode="global_menu_new" url="/montages?form" z="2WHXFZqqHLfKrVF5qnZkeMiwnMU="/>
+	            <menu:item id="i_montage_list" messageCode="global_menu_list" url="/montages?page=1&amp;size=${empty param.size ? 10 : param.size}" z="IjNyvDiz25N7+y5OH84sHWHWWAY="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_formationutilisateur" z="6RYOjHxWw61hiGCOrSCtNcB+CIg=">
+	            <menu:item id="i_formationutilisateur_new" messageCode="global_menu_new" url="/formationutilisateurs?form" z="cfLImxe1sLwzDbhYbhyP3p06eBI="/>
+	            <menu:item id="i_formationutilisateur_list" messageCode="global_menu_list" url="/formationutilisateurs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="0vAHeXI/ZNi7Tg9lW8B0zo+hZtY="/>
+	        </menu:category>
+		        
+    </menu:menu>
+</div>

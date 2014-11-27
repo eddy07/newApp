@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-    <definition extends="default" name="projetcommandes/list">
+    <definition extends="commercial" name="projetcommandes/list">
         <put-attribute name="body" value="/WEB-INF/views/projetcommandes/list.jspx"/>
     </definition>
-<definition extends="default" name="projetcommandes/show">
+<definition extends="commercial" name="projetcommandes/show">
         <put-attribute name="body" value="/WEB-INF/views/projetcommandes/show.jspx"/>
     </definition>
-<definition extends="default" name="projetcommandes/create">
+<definition extends="commercial" name="projetcommandes/create">
         <put-attribute name="body" value="/WEB-INF/views/projetcommandes/create.jspx"/>
     </definition>
-<definition extends="default" name="projetcommandes/update">
+<definition extends="commercial" name="projetcommandes/update">
         <put-attribute name="body" value="/WEB-INF/views/projetcommandes/update.jspx"/>
     </definition>
 </tiles-definitions>

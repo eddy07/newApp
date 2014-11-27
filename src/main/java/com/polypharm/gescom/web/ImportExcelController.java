@@ -28,6 +28,9 @@ public class ImportExcelController {
 	@RequestMapping(value="/excelfile", method = RequestMethod.POST)
 	public String importExcelFile(@RequestParam("sheetFile") MultipartFile sheetFile){
 		
+		if(sheetFile == null || sheetFile.isEmpty())
+			return "index";
+		
 		try {
 			InputStream stream = sheetFile.getInputStream();
 			dataSheetLoader.loadDataSheet(stream);

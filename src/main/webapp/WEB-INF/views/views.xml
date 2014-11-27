@@ -5,6 +5,18 @@
   <definition extends="default" name="index">
     <put-attribute name="body" value="/WEB-INF/views/index.jspx"/>
   </definition>
+  
+  <definition extends="datatemplate" name="data">
+    <put-attribute name="body" value="/WEB-INF/views/data.jspx"/>
+  </definition>
+  
+  <definition extends="techniquetemplate" name="technique">
+    <put-attribute name="body" value="/WEB-INF/views/technique.jspx"/>
+  </definition>
+  
+  <definition extends="commercialtemplate" name="commercial">
+    <put-attribute name="body" value="/WEB-INF/views/commercial.jspx"/>
+  </definition>
 
   <definition extends="public" name="dataAccessFailure">
     <put-attribute name="body" value="/WEB-INF/views/dataAccessFailure.jspx"/>

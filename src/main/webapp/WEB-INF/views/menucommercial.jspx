@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:sec="http://www.springframework.org/security/tags" xmlns:spring="http://www.springframework.org/tags" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+    
+    	
+    		<menu:category id="c_recrutementprospect" z="uaM2IIVuWV1KGr2MNWmU6R71elw=">
+	            <menu:item id="i_recrutementprospect_new" messageCode="global_menu_new" url="/recrutementprospects?form" z="3WxAsiXIkO5qCTKJGtMwO3M3GOs="/>
+	            <menu:item id="i_recrutementprospect_list" messageCode="global_menu_list" url="/recrutementprospects?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5+3oNSNAd/zWVKjr3UZA4uzPv8U="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_assistancecommerciale" z="X0Kd2MlUWdT0HSXrap198QqH3uc=">
+	            <menu:item id="i_assistancecommerciale_new" messageCode="global_menu_new" url="/assistancecommerciales?form" z="Ap3/G92AC8BGoCmwK6RprtZPSIA="/>
+	            <menu:item id="i_assistancecommerciale_list" messageCode="global_menu_list" url="/assistancecommerciales?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Xjpv6XPI9xCZW7+6yS6g8QRXA3M="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_conseilclient" z="koZk33W00fEMqatQYrzfZmf8+yg=">
+	            <menu:item id="i_conseilclient_new" messageCode="global_menu_new" url="/conseilclients?form" z="JgZ6XWKHNm2p6aoRx2gegkNZXdg="/>
+	            <menu:item id="i_conseilclient_list" messageCode="global_menu_list" url="/conseilclients?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Z6bl1SX8WGU51n+eJ8qCjHPsY64="/>
+	        </menu:category>
+	        
+    	
+	        <menu:category id="c_vulgarisationproduit" z="lUIKd/nb7vdqPG0KXmMuhF8RMno=">
+	            <menu:item id="i_vulgarisationproduit_new" messageCode="global_menu_new" url="/vulgarisationproduits?form" z="1xI5l7Hy7+vaC3MDLGCJLx8EWwc="/>
+	            <menu:item id="i_vulgarisationproduit_list" messageCode="global_menu_list" url="/vulgarisationproduits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="w6stMUOMbGiQTGFmk2oBD2MFKfY="/>
+	        </menu:category>
+		        
+	        <menu:category id="c_suivistock" z="5PXgwh5I68sEcVk8S3Mf2/pOAIU=">
+	            <menu:item id="i_suivistock_new" messageCode="global_menu_new" url="/suivistocks?form" z="yku1ZOX+3TLmfH/Mt8HUiOb2Lnw="/>
+	            <menu:item id="i_suivistock_list" messageCode="global_menu_list" url="/suivistocks?page=1&amp;size=${empty param.size ? 10 : param.size}" z="BoiKK/0cSSMG6UaXsKFM/zenLS4="/>
+	        </menu:category>
+    		
+	        <menu:category id="c_dossiercreance" z="K7YjiEPoYwJFxIIZXXAWjulN21g=">
+	            <menu:item id="i_dossiercreance_new" messageCode="global_menu_new" url="/dossiercreances?form" z="y7sf4BbXzrgnVcPdQ7LYOIjdxA8="/>
+	            <menu:item id="i_dossiercreance_list" messageCode="global_menu_list" url="/dossiercreances?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ek1wcGeCLkfRqAmtAOdSl7O7SRo="/>
+	        </menu:category>
+    		
+	        <menu:category id="c_veilleconcurrentielleproduit" z="FIvwPQTfe4REulvV1VyNVPF2+s8=">
+	            <menu:item id="i_veilleconcurrentielleproduit_new" messageCode="global_menu_new" url="/veilleconcurrentielleproduits?form" z="bh7mjySvjEnaHRkL3YVnkrlHGjs="/>
+	            <menu:item id="i_veilleconcurrentielleproduit_list" messageCode="global_menu_list" url="/veilleconcurrentielleproduits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2KCXxaR0jA8ll8oBHnRgd5k+zQE="/>
+	        </menu:category>
+	        
+	       
+		        
+	        <menu:category id="c_vcdistributeurconcurent" z="b3dOElBds8cIqgZ4KcgoH6x4jbY=">
+	            <menu:item id="i_vcdistributeurconcurent_new" messageCode="global_menu_new" url="/vcdistributeurconcurents?form" z="7fYeAEgkbWqP4PHM8RdO0voKyT8="/>
+	            <menu:item id="i_vcdistributeurconcurent_list" messageCode="global_menu_list" url="/vcdistributeurconcurents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Q6PSjT7jqrSzwNuwTlE4XrP7HMA="/>
+	        </menu:category>
+    		
+	       
+	        <menu:category id="c_projetcommande" z="O862c4jTOPndBBOFR10jQFfnbUY=">
+	            <menu:item id="i_projetcommande_new" messageCode="global_menu_new" url="/projetcommandes?form" z="ZkLaWzP2X2oz+mUeWPuk5nGk9yQ="/>
+	            <menu:item id="i_projetcommande_list" messageCode="global_menu_list" url="/projetcommandes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5px4r8se+T58WtQITrX1F/YbXt8="/>
+	        </menu:category>
+	        
+	        <menu:category id="c_livraison" z="Dnl1ctW81rTNKAqiXBr4wFu0nWQ=">
+	            <menu:item id="i_livraison_new" messageCode="global_menu_new" url="/livraisons?form" z="t6W/xD/kViUI/3cjFxosxaBh0r4="/>
+	            <menu:item id="i_livraison_list" messageCode="global_menu_list" url="/livraisons?page=1&amp;size=${empty param.size ? 10 : param.size}" z="WbmM/+7ReLSjTl+QcD6knE47ZFM="/>
+	        </menu:category>
+    
+    	
+	        
+    	
+    </menu:menu>
+</div>

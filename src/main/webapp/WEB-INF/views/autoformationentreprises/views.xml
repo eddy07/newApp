@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-    <definition extends="default" name="autoformationentreprises/list">
+    <definition extends="technique" name="autoformationentreprises/list">
         <put-attribute name="body" value="/WEB-INF/views/autoformationentreprises/list.jspx"/>
     </definition>
-<definition extends="default" name="autoformationentreprises/show">
+<definition extends="technique" name="autoformationentreprises/show">
         <put-attribute name="body" value="/WEB-INF/views/autoformationentreprises/show.jspx"/>
     </definition>
-<definition extends="default" name="autoformationentreprises/create">
+<definition extends="technique" name="autoformationentreprises/create">
         <put-attribute name="body" value="/WEB-INF/views/autoformationentreprises/create.jspx"/>
     </definition>
-<definition extends="default" name="autoformationentreprises/update">
+<definition extends="technique" name="autoformationentreprises/update">
         <put-attribute name="body" value="/WEB-INF/views/autoformationentreprises/update.jspx"/>
     </definition>
 </tiles-definitions>

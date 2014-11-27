@@ -12,9 +12,14 @@
 
 		<table >
 			<tr height="50px" align="center">
-				<td><a href="">Activites Commerciales</a></td>
-				<td><a href="">Activites Techniques</a></td>
-				<td><a href="">Data</a></td>
+				<spring:url value="/espace/commercial" var="commercial_url" ></spring:url>
+				<td><a href="${commercial_url }">Activites Commerciales</a></td>
+				
+				<spring:url value="/espace/technique" var="technique_url" ></spring:url>
+				<td><a href="${technique_url }">Activites Techniques</a></td>
+				
+				<spring:url value="/espace/data" var="data_url" ></spring:url>
+				<td><a href="${data_url }">Data</a></td>
 			</tr>
 			<tr height="50px" align="center" >
 				<td colspan="3">

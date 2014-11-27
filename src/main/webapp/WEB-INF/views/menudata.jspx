@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:sec="http://www.springframework.org/security/tags" xmlns:spring="http://www.springframework.org/tags" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="">
+    
+    	 <menu:category id="c_client" z="TjeLu8x0oS98tSiRzdPNDOc8U+c=">
+	            <menu:item id="i_client_new" messageCode="global_menu_new" url="/clients?form" z="0rEWYB2Yq6qokJif3zv05zcXpXk="/>
+	            <menu:item id="i_client_list" messageCode="global_menu_list" url="/clients?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/DxsyzfFyvp93UEW0WcXvtjs4zo="/>
+	        </menu:category>
+    	
+    	 <menu:category id="c_produit" z="L4FwOOfkWY427TT8GJsu+W98zz4=">
+	            <menu:item id="i_produit_new" messageCode="global_menu_new" url="/produits?form" z="kEQMseRIWklOxy8kklszEV//DG0="/>
+	            <menu:item id="i_produit_list" messageCode="global_menu_list" url="/produits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lBI1MBnu847VcwIaf2Ras5Qw41M="/>
+	        </menu:category>
+	        
+	         <menu:category id="c_familleproduit" z="GxA7BfO3xc1lQDIKQgWdAJvJnNU=">
+	            <menu:item id="i_familleproduit_new" messageCode="global_menu_new" url="/familleproduits?form" z="RQBig+w/eLLh0jCvVG3rTTFC3dA="/>
+	            <menu:item id="i_familleproduit_list" messageCode="global_menu_list" url="/familleproduits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="tVvGQKx5VJgXDMSHGTMcvR0gl+w="/>
+	        </menu:category>
+		        
+		    <menu:category id="c_agence" z="VF+wbsYQwmhJIZw2X3XIEo+Nc2g=">
+	            <menu:item id="i_agence_new" messageCode="global_menu_new" url="/agences?form" z="dNvMqj313DJ7vUMB8kg5OdjGxfk="/>
+	            <menu:item id="i_agence_list" messageCode="global_menu_list" url="/agences?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Mo8SZ6hntqMkGSVKd9dC42qPu4E="/>
+	        </menu:category>
+	        
+	        <menu:category id="c_personnel" z="cFeSx8eA+oURnlCOkO154dD6W4w=">
+	            <menu:item id="i_personnel_new" messageCode="global_menu_new" url="/personnels?form" z="D1aeI4y3xEtYQoAFkJG6f+/x0dQ="/>
+	            <menu:item id="i_personnel_list" messageCode="global_menu_list" url="/personnels?page=1&amp;size=${empty param.size ? 10 : param.size}" z="pPna/ycOjlBRdi7Zo1pJlwRrdic="/>
+	        </menu:category>
+    	
+		        
+    </menu:menu>
+</div>

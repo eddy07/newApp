@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-    <definition extends="default" name="recrutementprospects/list">
+    <definition extends="commercial" name="recrutementprospects/list">
         <put-attribute name="body" value="/WEB-INF/views/recrutementprospects/list.jspx"/>
     </definition>
-<definition extends="default" name="recrutementprospects/show">
+<definition extends="commercial" name="recrutementprospects/show">
         <put-attribute name="body" value="/WEB-INF/views/recrutementprospects/show.jspx"/>
     </definition>
-<definition extends="default" name="recrutementprospects/create">
+<definition extends="commercial" name="recrutementprospects/create">
         <put-attribute name="body" value="/WEB-INF/views/recrutementprospects/create.jspx"/>
     </definition>
-<definition extends="default" name="recrutementprospects/update">
+<definition extends="commercial" name="recrutementprospects/update">
         <put-attribute name="body" value="/WEB-INF/views/recrutementprospects/update.jspx"/>
     </definition>
 </tiles-definitions>

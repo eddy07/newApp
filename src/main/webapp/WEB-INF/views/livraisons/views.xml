@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-    <definition extends="default" name="livraisons/list">
+    <definition extends="commercial" name="livraisons/list">
         <put-attribute name="body" value="/WEB-INF/views/livraisons/list.jspx"/>
     </definition>
-<definition extends="default" name="livraisons/show">
+<definition extends="commercial" name="livraisons/show">
         <put-attribute name="body" value="/WEB-INF/views/livraisons/show.jspx"/>
     </definition>
-<definition extends="default" name="livraisons/create">
+<definition extends="commercial" name="livraisons/create">
         <put-attribute name="body" value="/WEB-INF/views/livraisons/create.jspx"/>
     </definition>
-<definition extends="default" name="livraisons/update">
+<definition extends="commercial" name="livraisons/update">
         <put-attribute name="body" value="/WEB-INF/views/livraisons/update.jspx"/>
     </definition>
 </tiles-definitions>

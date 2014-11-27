@@ -5,9 +5,27 @@
 
 <tiles-definitions>
 
-  <definition name="default" template="/WEB-INF/layouts/default.jspx">
+  <definition name="default" template="/WEB-INF/layouts/default.jspx" >
     <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
     <put-attribute name="menu" value="/WEB-INF/views/menu.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+  </definition>
+  
+  <definition name="datatemplate" template="/WEB-INF/layouts/data.jspx" >
+    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+    <put-attribute name="menu" value="/WEB-INF/views/menudata.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+  </definition>
+  
+  <definition name="techniquetemplate" template="/WEB-INF/layouts/technique.jspx" >
+    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+    <put-attribute name="menu" value="/WEB-INF/views/menutechnique.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+  </definition>
+  
+  <definition name="commercialtemplate" template="/WEB-INF/layouts/commercial.jspx" >
+    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+    <put-attribute name="menu" value="/WEB-INF/views/menucommercial.jspx" />
     <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
   </definition>
 

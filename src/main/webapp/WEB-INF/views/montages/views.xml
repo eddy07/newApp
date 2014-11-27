@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-    <definition extends="default" name="montages/list">
+    <definition extends="technique" name="montages/list">
         <put-attribute name="body" value="/WEB-INF/views/montages/list.jspx"/>
     </definition>
-<definition extends="default" name="montages/show">
+<definition extends="technique" name="montages/show">
         <put-attribute name="body" value="/WEB-INF/views/montages/show.jspx"/>
     </definition>
-<definition extends="default" name="montages/create">
+<definition extends="technique" name="montages/create">
         <put-attribute name="body" value="/WEB-INF/views/montages/create.jspx"/>
     </definition>
-<definition extends="default" name="montages/update">
+<definition extends="technique" name="montages/update">
         <put-attribute name="body" value="/WEB-INF/views/montages/update.jspx"/>
     </definition>
 </tiles-definitions>
