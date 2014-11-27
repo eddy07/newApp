@@ -18,7 +18,11 @@
 			</tr>
 			<tr height="50px" align="center" >
 				<td colspan="3">
-					<p>Importer le fichier excel de votre activite de la journe</p>
+					<p>
+						<spring:url value="/import/download" var="download_url"></spring:url>
+						<a href="${download_url}">Telecharger</a> le fichier excel des activites commerciales,<br/>
+							Remplisser vos donnees et importer dans le systeme.
+					</p>
 				</td>
 			</tr>
 			<tr>
