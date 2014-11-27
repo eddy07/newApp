@@ -14,6 +14,8 @@ privileged aspect Personnel_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Personnel.entityManager;
     
+    public static final List<String> Personnel.fieldNames4OrderClauseFilter = java.util.Arrays.asList("accExp", "nom", "nomConnection", "motDePass", "nomComplet", "telephone", "email", "roleName", "agence", "disableLogin", "accountExpiration", "credentialExpiration", "accountLocked");
+    
     public static final EntityManager Personnel.entityManager() {
         EntityManager em = new Personnel().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect Personnel_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Personnel o", Personnel.class).getResultList();
     }
     
+    public static List<Personnel> Personnel.findAllPersonnels(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Personnel o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, Personnel.class).getResultList();
+    }
+    
     public static Personnel Personnel.findPersonnel(Long id) {
         if (id == null) return null;
         return entityManager().find(Personnel.class, id);
@@ -35,6 +48,17 @@ privileged aspect Personnel_Roo_Jpa_ActiveRecord {
     
     public static List<Personnel> Personnel.findPersonnelEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM Personnel o", Personnel.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<Personnel> Personnel.findPersonnelEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Personnel o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, Personnel.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

@@ -14,6 +14,8 @@ privileged aspect Livraison_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Livraison.entityManager;
     
+    public static final List<String> Livraison.fieldNames4OrderClauseFilter = java.util.Arrays.asList("numeroBodereauLivraison", "client", "dureLivraison");
+    
     public static final EntityManager Livraison.entityManager() {
         EntityManager em = new Livraison().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect Livraison_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Livraison o", Livraison.class).getResultList();
     }
     
+    public static List<Livraison> Livraison.findAllLivraisons(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Livraison o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, Livraison.class).getResultList();
+    }
+    
     public static Livraison Livraison.findLivraison(Long id) {
         if (id == null) return null;
         return entityManager().find(Livraison.class, id);
@@ -35,6 +48,17 @@ privileged aspect Livraison_Roo_Jpa_ActiveRecord {
     
     public static List<Livraison> Livraison.findLivraisonEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM Livraison o", Livraison.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<Livraison> Livraison.findLivraisonEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Livraison o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, Livraison.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

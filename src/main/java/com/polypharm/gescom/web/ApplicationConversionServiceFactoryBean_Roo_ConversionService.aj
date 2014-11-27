@@ -183,7 +183,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Client, String> ApplicationConversionServiceFactoryBean.getClientToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.polypharm.gescom.domain.Client, java.lang.String>() {
             public String convert(Client client) {
-                return new StringBuilder().append(client.getNom()).append(' ').append(client.getTelephone()).append(' ').append(client.getNumeroCarteContribuable()).append(' ').append(client.getExpirationCarteContribuable()).toString();
+                return new StringBuilder().append(client.getCode()).append(' ').append(client.getNom()).append(' ').append(client.getTelephone()).append(' ').append(client.getNumeroCarteContribuable()).toString();
             }
         };
     }
@@ -399,7 +399,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Produit, String> ApplicationConversionServiceFactoryBean.getProduitToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.polypharm.gescom.domain.Produit, java.lang.String>() {
             public String convert(Produit produit) {
-                return new StringBuilder().append(produit.getNom()).append(' ').append(produit.getDescription()).append(' ').append(produit.getMarque()).toString();
+                return new StringBuilder().append(produit.getCode()).append(' ').append(produit.getNom()).append(' ').append(produit.getDescription()).append(' ').append(produit.getMarque()).toString();
             }
         };
     }

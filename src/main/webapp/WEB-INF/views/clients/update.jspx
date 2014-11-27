@@ -13,5 +13,6 @@
         <field:checkbox field="colleterTva" id="c_com_polypharm_gescom_domain_Client_colleterTva" z="Bwg+xh5gCU8OsuLEWATRcilQ/ec="/>
         <field:input field="numAttestationNonRedevance" id="c_com_polypharm_gescom_domain_Client_numAttestationNonRedevance" z="EEmznRChDTlNq3HQyros/2e4ToA="/>
         <field:input field="numAttestationSoumissionCNPS" id="c_com_polypharm_gescom_domain_Client_numAttestationSoumissionCNPS" z="vtjYLrpw8l7C1npSW8SOJpTvndk="/>
+        <field:input field="code" id="c_com_polypharm_gescom_domain_Client_code" z="e1JFzHUSJWqoPGhKxr6qYM1isX4="/>
     </form:update>
 </div>

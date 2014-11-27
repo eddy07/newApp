@@ -14,6 +14,8 @@ privileged aspect FormationUtilisateur_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager FormationUtilisateur.entityManager;
     
+    public static final List<String> FormationUtilisateur.fieldNames4OrderClauseFilter = java.util.Arrays.asList("objetFormation", "nbreInterlocuteur", "dureFormation", "dateFormation");
+    
     public static final EntityManager FormationUtilisateur.entityManager() {
         EntityManager em = new FormationUtilisateur().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect FormationUtilisateur_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM FormationUtilisateur o", FormationUtilisateur.class).getResultList();
     }
     
+    public static List<FormationUtilisateur> FormationUtilisateur.findAllFormationUtilisateurs(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM FormationUtilisateur o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, FormationUtilisateur.class).getResultList();
+    }
+    
     public static FormationUtilisateur FormationUtilisateur.findFormationUtilisateur(Long id) {
         if (id == null) return null;
         return entityManager().find(FormationUtilisateur.class, id);
@@ -35,6 +48,17 @@ privileged aspect FormationUtilisateur_Roo_Jpa_ActiveRecord {
     
     public static List<FormationUtilisateur> FormationUtilisateur.findFormationUtilisateurEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM FormationUtilisateur o", FormationUtilisateur.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<FormationUtilisateur> FormationUtilisateur.findFormationUtilisateurEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM FormationUtilisateur o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, FormationUtilisateur.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

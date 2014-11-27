@@ -7,5 +7,6 @@
         <field:input field="description" id="c_com_polypharm_gescom_domain_Produit_description" z="az6kedzXWt7SJVVouY9PLQYN8NI="/>
         <field:select field="familleProduit" id="c_com_polypharm_gescom_domain_Produit_familleProduit" itemValue="id" items="${familleproduits}" path="/familleproduits" z="fyC96/3tDXfwrYmBTClEWAwqEXw="/>
         <field:input field="marque" id="c_com_polypharm_gescom_domain_Produit_marque" z="gSTHi8KN5elmN6Yii0OIoPUrG0Y="/>
+        <field:input field="code" id="c_com_polypharm_gescom_domain_Produit_code" z="uJKFymLWiTrsmQSBUBLXKkq2FoM="/>
     </form:update>
 </div>

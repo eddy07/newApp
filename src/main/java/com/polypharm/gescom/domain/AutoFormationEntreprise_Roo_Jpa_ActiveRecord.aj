@@ -14,6 +14,8 @@ privileged aspect AutoFormationEntreprise_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager AutoFormationEntreprise.entityManager;
     
+    public static final List<String> AutoFormationEntreprise.fieldNames4OrderClauseFilter = java.util.Arrays.asList("objetAutoFormation", "nbreInterlocuteur", "duree", "dateAutoFormation");
+    
     public static final EntityManager AutoFormationEntreprise.entityManager() {
         EntityManager em = new AutoFormationEntreprise().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect AutoFormationEntreprise_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM AutoFormationEntreprise o", AutoFormationEntreprise.class).getResultList();
     }
     
+    public static List<AutoFormationEntreprise> AutoFormationEntreprise.findAllAutoFormationEntreprises(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM AutoFormationEntreprise o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, AutoFormationEntreprise.class).getResultList();
+    }
+    
     public static AutoFormationEntreprise AutoFormationEntreprise.findAutoFormationEntreprise(Long id) {
         if (id == null) return null;
         return entityManager().find(AutoFormationEntreprise.class, id);
@@ -35,6 +48,17 @@ privileged aspect AutoFormationEntreprise_Roo_Jpa_ActiveRecord {
     
     public static List<AutoFormationEntreprise> AutoFormationEntreprise.findAutoFormationEntrepriseEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM AutoFormationEntreprise o", AutoFormationEntreprise.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<AutoFormationEntreprise> AutoFormationEntreprise.findAutoFormationEntrepriseEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM AutoFormationEntreprise o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, AutoFormationEntreprise.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

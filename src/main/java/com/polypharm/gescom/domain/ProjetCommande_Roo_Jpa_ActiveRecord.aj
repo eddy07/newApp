@@ -14,6 +14,8 @@ privileged aspect ProjetCommande_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager ProjetCommande.entityManager;
     
+    public static final List<String> ProjetCommande.fieldNames4OrderClauseFilter = java.util.Arrays.asList("objetProjet", "referencePROFORMA", "referenceBonCommande", "clientConcerne", "interlocuteurPrincipal");
+    
     public static final EntityManager ProjetCommande.entityManager() {
         EntityManager em = new ProjetCommande().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect ProjetCommande_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM ProjetCommande o", ProjetCommande.class).getResultList();
     }
     
+    public static List<ProjetCommande> ProjetCommande.findAllProjetCommandes(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM ProjetCommande o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, ProjetCommande.class).getResultList();
+    }
+    
     public static ProjetCommande ProjetCommande.findProjetCommande(Long id) {
         if (id == null) return null;
         return entityManager().find(ProjetCommande.class, id);
@@ -35,6 +48,17 @@ privileged aspect ProjetCommande_Roo_Jpa_ActiveRecord {
     
     public static List<ProjetCommande> ProjetCommande.findProjetCommandeEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM ProjetCommande o", ProjetCommande.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<ProjetCommande> ProjetCommande.findProjetCommandeEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM ProjetCommande o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, ProjetCommande.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

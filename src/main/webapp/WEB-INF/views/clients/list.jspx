@@ -9,7 +9,7 @@
             <table:column id="c_com_polypharm_gescom_domain_Client_numeroCarteContribuable" property="numeroCarteContribuable" z="HwXAXVJ8TcKAMcAUYZ7MfBKjGos="/>
             <table:column date="true" dateTimePattern="${client_expirationcartecontribuable_date_format}" id="c_com_polypharm_gescom_domain_Client_expirationCarteContribuable" property="expirationCarteContribuable" z="RE/Dsn0VEF1BgLmeNSepV5aS03k="/>
             <table:column id="c_com_polypharm_gescom_domain_Client_regimeFiscal" property="regimeFiscal" z="TR2wgEQuLO5+QK1uTMTiHi+htD8="/>
-            <table:column date="true" dateTimePattern="${client_expirationpatente_date_format}" id="c_com_polypharm_gescom_domain_Client_expirationPatente" property="expirationPatente" z="NNxikzkfzh3DCPYktq1ibCijqF4="/>
+            <table:column id="c_com_polypharm_gescom_domain_Client_code" property="code" z="QxHBGLq9/GwECI20ZwFGMuwHo50="/>
         </table:table>
     </page:list>
 </div>

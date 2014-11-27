@@ -14,6 +14,8 @@ privileged aspect VCDistributeurConcurent_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager VCDistributeurConcurent.entityManager;
     
+    public static final List<String> VCDistributeurConcurent.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nomDistributeur", "localisation", "produitsDistribues");
+    
     public static final EntityManager VCDistributeurConcurent.entityManager() {
         EntityManager em = new VCDistributeurConcurent().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect VCDistributeurConcurent_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM VCDistributeurConcurent o", VCDistributeurConcurent.class).getResultList();
     }
     
+    public static List<VCDistributeurConcurent> VCDistributeurConcurent.findAllVCDistributeurConcurents(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM VCDistributeurConcurent o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, VCDistributeurConcurent.class).getResultList();
+    }
+    
     public static VCDistributeurConcurent VCDistributeurConcurent.findVCDistributeurConcurent(Long id) {
         if (id == null) return null;
         return entityManager().find(VCDistributeurConcurent.class, id);
@@ -35,6 +48,17 @@ privileged aspect VCDistributeurConcurent_Roo_Jpa_ActiveRecord {
     
     public static List<VCDistributeurConcurent> VCDistributeurConcurent.findVCDistributeurConcurentEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM VCDistributeurConcurent o", VCDistributeurConcurent.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<VCDistributeurConcurent> VCDistributeurConcurent.findVCDistributeurConcurentEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM VCDistributeurConcurent o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, VCDistributeurConcurent.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

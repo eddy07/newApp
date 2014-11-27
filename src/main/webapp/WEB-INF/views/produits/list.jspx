@@ -8,6 +8,7 @@
             <table:column id="c_com_polypharm_gescom_domain_Produit_description" property="description" z="tb1broQVHVPbDbc3UDDORR9NExs="/>
             <table:column id="c_com_polypharm_gescom_domain_Produit_familleProduit" property="familleProduit" z="gEbiBpS98T9/yzexuGuJTc+BTTY="/>
             <table:column id="c_com_polypharm_gescom_domain_Produit_marque" property="marque" z="eDNd+Lptetxt98ejWV+cM3hipYw="/>
+            <table:column id="c_com_polypharm_gescom_domain_Produit_code" property="code" z="bt6qQ+DuTLnbw7dX/4hoW6oM1Zk="/>
         </table:table>
     </page:list>
 </div>

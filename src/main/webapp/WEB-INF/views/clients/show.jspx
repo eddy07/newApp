@@ -13,5 +13,6 @@
         <field:display field="colleterTva" id="s_com_polypharm_gescom_domain_Client_colleterTva" object="${client}" z="di1Wj7XHRqh/wBElL05XELbBd1Y="/>
         <field:display field="numAttestationNonRedevance" id="s_com_polypharm_gescom_domain_Client_numAttestationNonRedevance" object="${client}" z="NAkZuD0nbiSAwy9LcRcHVs3A6dQ="/>
         <field:display field="numAttestationSoumissionCNPS" id="s_com_polypharm_gescom_domain_Client_numAttestationSoumissionCNPS" object="${client}" z="6XVRNSYdC8hZBjqBlP1tss8mAV0="/>
+        <field:display field="code" id="s_com_polypharm_gescom_domain_Client_code" object="${client}" z="4v/PKze+CF2wy2RFy9BdUi/ToPA="/>
     </page:show>
 </div>

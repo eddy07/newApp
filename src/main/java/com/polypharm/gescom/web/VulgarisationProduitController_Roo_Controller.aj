@@ -64,15 +64,15 @@ privileged aspect VulgarisationProduitController_Roo_Controller {
     }
     
     @RequestMapping(produces = "text/html")
-    public String VulgarisationProduitController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String VulgarisationProduitController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, @RequestParam(value = "sortFieldName", required = false) String sortFieldName, @RequestParam(value = "sortOrder", required = false) String sortOrder, Model uiModel) {
         if (page != null || size != null) {
             int sizeNo = size == null ? 10 : size.intValue();
             final int firstResult = page == null ? 0 : (page.intValue() - 1) * sizeNo;
-            uiModel.addAttribute("vulgarisationproduits", vulgarisationProduitService.findVulgarisationProduitEntries(firstResult, sizeNo));
+            uiModel.addAttribute("vulgarisationproduits", VulgarisationProduit.findVulgarisationProduitEntries(firstResult, sizeNo, sortFieldName, sortOrder));
             float nrOfPages = (float) vulgarisationProduitService.countAllVulgarisationProduits() / sizeNo;
             uiModel.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
         } else {
-            uiModel.addAttribute("vulgarisationproduits", vulgarisationProduitService.findAllVulgarisationProduits());
+            uiModel.addAttribute("vulgarisationproduits", VulgarisationProduit.findAllVulgarisationProduits(sortFieldName, sortOrder));
         }
         addDateTimeFormatPatterns(uiModel);
         return "vulgarisationproduits/list";

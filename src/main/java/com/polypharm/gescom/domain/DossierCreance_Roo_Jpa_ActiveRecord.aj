@@ -14,6 +14,8 @@ privileged aspect DossierCreance_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager DossierCreance.entityManager;
     
+    public static final List<String> DossierCreance.fieldNames4OrderClauseFilter = java.util.Arrays.asList("numBonCommande", "numBonLivraison", "numFacture", "natureGarantie", "numContratCreance", "dateEmission", "dateEchance", "client", "auteur");
+    
     public static final EntityManager DossierCreance.entityManager() {
         EntityManager em = new DossierCreance().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect DossierCreance_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM DossierCreance o", DossierCreance.class).getResultList();
     }
     
+    public static List<DossierCreance> DossierCreance.findAllDossierCreances(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM DossierCreance o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, DossierCreance.class).getResultList();
+    }
+    
     public static DossierCreance DossierCreance.findDossierCreance(Long id) {
         if (id == null) return null;
         return entityManager().find(DossierCreance.class, id);
@@ -35,6 +48,17 @@ privileged aspect DossierCreance_Roo_Jpa_ActiveRecord {
     
     public static List<DossierCreance> DossierCreance.findDossierCreanceEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM DossierCreance o", DossierCreance.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<DossierCreance> DossierCreance.findDossierCreanceEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM DossierCreance o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, DossierCreance.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

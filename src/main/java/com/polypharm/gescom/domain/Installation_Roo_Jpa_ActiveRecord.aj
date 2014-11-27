@@ -14,6 +14,8 @@ privileged aspect Installation_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Installation.entityManager;
     
+    public static final List<String> Installation.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nomEquipement", "client", "dateInstallation", "auteur");
+    
     public static final EntityManager Installation.entityManager() {
         EntityManager em = new Installation().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect Installation_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Installation o", Installation.class).getResultList();
     }
     
+    public static List<Installation> Installation.findAllInstallations(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Installation o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, Installation.class).getResultList();
+    }
+    
     public static Installation Installation.findInstallation(Long id) {
         if (id == null) return null;
         return entityManager().find(Installation.class, id);
@@ -35,6 +48,17 @@ privileged aspect Installation_Roo_Jpa_ActiveRecord {
     
     public static List<Installation> Installation.findInstallationEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM Installation o", Installation.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<Installation> Installation.findInstallationEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Installation o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, Installation.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

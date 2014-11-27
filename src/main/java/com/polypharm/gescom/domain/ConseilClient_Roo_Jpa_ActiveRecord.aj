@@ -14,6 +14,8 @@ privileged aspect ConseilClient_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager ConseilClient.entityManager;
     
+    public static final List<String> ConseilClient.fieldNames4OrderClauseFilter = java.util.Arrays.asList("objetDuConseil", "client", "interlocuteur");
+    
     public static final EntityManager ConseilClient.entityManager() {
         EntityManager em = new ConseilClient().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect ConseilClient_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM ConseilClient o", ConseilClient.class).getResultList();
     }
     
+    public static List<ConseilClient> ConseilClient.findAllConseilClients(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM ConseilClient o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, ConseilClient.class).getResultList();
+    }
+    
     public static ConseilClient ConseilClient.findConseilClient(Long id) {
         if (id == null) return null;
         return entityManager().find(ConseilClient.class, id);
@@ -35,6 +48,17 @@ privileged aspect ConseilClient_Roo_Jpa_ActiveRecord {
     
     public static List<ConseilClient> ConseilClient.findConseilClientEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM ConseilClient o", ConseilClient.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<ConseilClient> ConseilClient.findConseilClientEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM ConseilClient o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, ConseilClient.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

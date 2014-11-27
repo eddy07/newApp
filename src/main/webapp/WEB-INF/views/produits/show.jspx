@@ -7,5 +7,6 @@
         <field:display field="description" id="s_com_polypharm_gescom_domain_Produit_description" object="${produit}" z="WmemGi6ngQ1NfcjEX/FvD0GMUnY="/>
         <field:display field="familleProduit" id="s_com_polypharm_gescom_domain_Produit_familleProduit" object="${produit}" z="4OLuDfuvKESU0HQVyvXNBQuJbbk="/>
         <field:display field="marque" id="s_com_polypharm_gescom_domain_Produit_marque" object="${produit}" z="ScKKqy7rGeNCMVURAzoHYd1aVIc="/>
+        <field:display field="code" id="s_com_polypharm_gescom_domain_Produit_code" object="${produit}" z="yPkepez5i6Ro0qVrBDH07mzOdtw="/>
     </page:show>
 </div>

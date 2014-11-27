@@ -14,6 +14,8 @@ privileged aspect AssistanceCommerciale_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager AssistanceCommerciale.entityManager;
     
+    public static final List<String> AssistanceCommerciale.fieldNames4OrderClauseFilter = java.util.Arrays.asList("objetAssistance", "collegueAssiste");
+    
     public static final EntityManager AssistanceCommerciale.entityManager() {
         EntityManager em = new AssistanceCommerciale().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect AssistanceCommerciale_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM AssistanceCommerciale o", AssistanceCommerciale.class).getResultList();
     }
     
+    public static List<AssistanceCommerciale> AssistanceCommerciale.findAllAssistanceCommerciales(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM AssistanceCommerciale o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, AssistanceCommerciale.class).getResultList();
+    }
+    
     public static AssistanceCommerciale AssistanceCommerciale.findAssistanceCommerciale(Long id) {
         if (id == null) return null;
         return entityManager().find(AssistanceCommerciale.class, id);
@@ -35,6 +48,17 @@ privileged aspect AssistanceCommerciale_Roo_Jpa_ActiveRecord {
     
     public static List<AssistanceCommerciale> AssistanceCommerciale.findAssistanceCommercialeEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM AssistanceCommerciale o", AssistanceCommerciale.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<AssistanceCommerciale> AssistanceCommerciale.findAssistanceCommercialeEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM AssistanceCommerciale o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, AssistanceCommerciale.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

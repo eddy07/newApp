@@ -14,6 +14,8 @@ privileged aspect VeilleConcurrentielleProduit_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager VeilleConcurrentielleProduit.entityManager;
     
+    public static final List<String> VeilleConcurrentielleProduit.fieldNames4OrderClauseFilter = java.util.Arrays.asList("produit", "prixDeVente", "distributeurPrincipal", "niveauStockProduitChezConcurent");
+    
     public static final EntityManager VeilleConcurrentielleProduit.entityManager() {
         EntityManager em = new VeilleConcurrentielleProduit().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect VeilleConcurrentielleProduit_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM VeilleConcurrentielleProduit o", VeilleConcurrentielleProduit.class).getResultList();
     }
     
+    public static List<VeilleConcurrentielleProduit> VeilleConcurrentielleProduit.findAllVeilleConcurrentielleProduits(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM VeilleConcurrentielleProduit o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, VeilleConcurrentielleProduit.class).getResultList();
+    }
+    
     public static VeilleConcurrentielleProduit VeilleConcurrentielleProduit.findVeilleConcurrentielleProduit(Long id) {
         if (id == null) return null;
         return entityManager().find(VeilleConcurrentielleProduit.class, id);
@@ -35,6 +48,17 @@ privileged aspect VeilleConcurrentielleProduit_Roo_Jpa_ActiveRecord {
     
     public static List<VeilleConcurrentielleProduit> VeilleConcurrentielleProduit.findVeilleConcurrentielleProduitEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM VeilleConcurrentielleProduit o", VeilleConcurrentielleProduit.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<VeilleConcurrentielleProduit> VeilleConcurrentielleProduit.findVeilleConcurrentielleProduitEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM VeilleConcurrentielleProduit o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, VeilleConcurrentielleProduit.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional

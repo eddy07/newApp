@@ -14,6 +14,8 @@ privileged aspect SuiviStock_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager SuiviStock.entityManager;
     
+    public static final List<String> SuiviStock.fieldNames4OrderClauseFilter = java.util.Arrays.asList("produit", "derniereQteCommande", "qteStock", "dateDerniereCommande", "dateSuivi");
+    
     public static final EntityManager SuiviStock.entityManager() {
         EntityManager em = new SuiviStock().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
@@ -28,6 +30,17 @@ privileged aspect SuiviStock_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM SuiviStock o", SuiviStock.class).getResultList();
     }
     
+    public static List<SuiviStock> SuiviStock.findAllSuiviStocks(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM SuiviStock o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, SuiviStock.class).getResultList();
+    }
+    
     public static SuiviStock SuiviStock.findSuiviStock(Long id) {
         if (id == null) return null;
         return entityManager().find(SuiviStock.class, id);
@@ -35,6 +48,17 @@ privileged aspect SuiviStock_Roo_Jpa_ActiveRecord {
     
     public static List<SuiviStock> SuiviStock.findSuiviStockEntries(int firstResult, int maxResults) {
         return entityManager().createQuery("SELECT o FROM SuiviStock o", SuiviStock.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
+    
+    public static List<SuiviStock> SuiviStock.findSuiviStockEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM SuiviStock o";
+        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
+            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
+            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
+                jpaQuery = jpaQuery + " " + sortOrder;
+            }
+        }
+        return entityManager().createQuery(jpaQuery, SuiviStock.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional
